@@ -275,6 +275,14 @@ body {
     padding: 1rem 1.25rem;          // 20px horizontal on mobile
     min-height: 64px;
 
+    // When the mobile menu is expanded, the navbar's own bottom border
+    // becomes a redundant second line above the menu strip's border-top.
+    // Hide it; the menu strip provides the divider.
+    &:has(.navbar-collapse.show),
+    &:has(.navbar-collapse.collapsing) {
+      border-bottom-color: transparent;
+    }
+
     .navbar-brand-container,
     .navbar-brand {
       // Hide the inner <img> and any text inside the brand link.
