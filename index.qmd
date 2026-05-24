@@ -6,8 +6,8 @@ format:
     page-layout: full
     include-in-header:
       text: |
-        <meta http-equiv="refresh" content="0; url=/en/">
-        <link rel="canonical" href="https://white-ribbon.net/en/">
+        <meta http-equiv="refresh" content="0; url=/ru/">
+        <link rel="canonical" href="https://white-ribbon.net/ru/">
 ---
 
 ::: {.language-gate}
