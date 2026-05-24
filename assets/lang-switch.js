@@ -103,41 +103,6 @@
   function init() {
     localizeAboutLink();
     attachLangSwitchHandlers();
-    attachThemeRepaintFix();
-  }
-
-  // Force-repaint the theme toggle icon after theme switch.
-  //
-  // The icon is a Bootstrap Icons SVG embedded as a data-URL background
-  // on `.bi::before`. When the theme changes, the CSS rule updates, but
-  // browsers (notably Chrome on mobile) sometimes don't repaint the
-  // pseudo-element's background-image — leaving the old icon visible or
-  // a blank space. Toggling a no-op transform on the toggle button forces
-  // a repaint of its pseudo-element children.
-  function attachThemeRepaintFix() {
-    const observer = new MutationObserver(() => {
-      const toggles = document.querySelectorAll('.quarto-color-scheme-toggle');
-      toggles.forEach((t) => {
-        // Trigger reflow + repaint by briefly toggling a transform.
-        t.style.transform = 'translateZ(0)';
-        // Read offsetHeight to force layout, then clear in next frame.
-        void t.offsetHeight;
-        requestAnimationFrame(() => {
-          t.style.transform = '';
-        });
-      });
-    });
-
-    // Quarto toggles theme by changing classes on <body> (quarto-light /
-    // quarto-dark) and data-bs-theme on <html>. Watch both.
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ['data-bs-theme', 'class'],
-    });
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ['class'],
-    });
   }
 
   if (document.readyState === 'loading') {
