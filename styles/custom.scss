@@ -379,9 +379,13 @@ body {
         width: auto;
         padding: 0 !important;
 
-        // Push the last item (About) to the right edge
+        // Push the last item (About) to the right edge.
+        // Pull it 9px in from the right so its trailing letter aligns
+        // visually with the X icon (which sits in a 40px button with
+        // ~9px of internal padding on the right).
         &:last-child {
           margin-left: auto;
+          margin-right: 9px;
         }
       }
 
