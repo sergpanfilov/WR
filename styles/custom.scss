@@ -277,16 +277,20 @@ body {
 
     .navbar-brand-container,
     .navbar-brand {
-      // Hide the inner <img> and any text inside the brand link,
-      // but keep the <a> itself visible and clickable. Then paint the
-      // mini W|R mark as the link's background image so the whole
-      // clickable area shows the mark.
+      // Hide the inner <img> and any text inside the brand link.
       img.navbar-logo,
       .navbar-title {
         display: none !important;
       }
 
-      a.navbar-brand,
+      // Quarto renders TWO sibling anchors: a.navbar-brand-logo (image
+      // wrapper) and a.navbar-brand (text fallback, parent of img). Both
+      // point at the same URL. Keep only the -logo one visible; hide
+      // the bare .navbar-brand sibling so we don't get two clickable marks.
+      a.navbar-brand:not(.navbar-brand-logo) {
+        display: none !important;
+      }
+
       a.navbar-brand-logo {
         display: block !important;
         width: 64px;
@@ -303,9 +307,7 @@ body {
     }
   }
 
-  // In dark mode, swap the mark to its dark-theme variant on the link itself.
-  body.quarto-dark #quarto-header > nav.navbar .navbar-brand,
-  body.quarto-dark #quarto-header > nav.navbar a.navbar-brand,
+  // In dark mode, swap the mark to its dark-theme variant on the logo link.
   body.quarto-dark #quarto-header > nav.navbar a.navbar-brand-logo {
     background-image: url('/assets/Logo_WR_mark_dark.svg') !important;
   }
