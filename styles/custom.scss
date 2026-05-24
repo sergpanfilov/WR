@@ -275,14 +275,6 @@ body {
     padding: 1rem 1.25rem;          // 20px horizontal on mobile
     min-height: 64px;
 
-    // When the mobile menu is expanded, the navbar's own bottom border
-    // becomes a redundant second line above the menu strip's border-top.
-    // Hide it; the menu strip provides the divider.
-    &:has(.navbar-collapse.show),
-    &:has(.navbar-collapse.collapsing) {
-      border-bottom-color: transparent;
-    }
-
     .navbar-brand-container,
     .navbar-brand {
       // Hide the inner <img> and any text inside the brand link.
@@ -363,6 +355,9 @@ body {
     // horizontal padding, so .navbar-collapse spans the inner width.
     // This way EN aligns flush left with the W of the logo, and "About"
     // aligns flush right with the burger/X.
+    //
+    // The menu drops BELOW the navbar's bottom border (which stays put
+    // when the menu opens, providing a stable visual anchor).
     .navbar-collapse.show,
     .navbar-collapse.collapsing {
       display: flex !important;
@@ -370,7 +365,6 @@ body {
       margin: 0 !important;
       padding: 14px 0 !important;
       flex-basis: 100%;
-      border-top: 1px solid $rule-color;
 
       .navbar-nav {
         flex-direction: row !important;
