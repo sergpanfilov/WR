@@ -277,34 +277,37 @@ body {
 
     .navbar-brand-container,
     .navbar-brand {
-      // Hide ALL Quarto-generated logo links on mobile (there can be
-      // two: navbar-brand-logo for the image, and navbar-brand as text
-      // fallback). Replace with a compact mark on the parent via ::before.
-      a.navbar-brand,
-      a.navbar-brand-logo,
-      img.navbar-logo {
+      // Hide the inner <img> and any text inside the brand link,
+      // but keep the <a> itself visible and clickable. Then paint the
+      // mini W|R mark as the link's background image so the whole
+      // clickable area shows the mark.
+      img.navbar-logo,
+      .navbar-title {
         display: none !important;
       }
 
-      // Show the compact mark via ::before. Light theme picks the
-      // light-mode SVG; dark theme overrides below.
-      &::before {
-        content: "";
-        display: block;
+      a.navbar-brand,
+      a.navbar-brand-logo {
+        display: block !important;
         width: 64px;
         height: 44px;
         background-image: url('/assets/Logo_WR_mark_light.svg');
         background-repeat: no-repeat;
         background-position: left center;
         background-size: contain;
+        // Hide any text node fallback ("White Ribbon") that Quarto
+        // sometimes injects directly into the <a>.
+        font-size: 0;
+        color: transparent;
       }
     }
   }
 
-  // In dark mode, swap the mark to its dark-theme variant.
-  body.quarto-dark #quarto-header > nav.navbar .navbar-brand-container::before,
-  body.quarto-dark #quarto-header > nav.navbar .navbar-brand::before {
-    background-image: url('/assets/Logo_WR_mark_dark.svg');
+  // In dark mode, swap the mark to its dark-theme variant on the link itself.
+  body.quarto-dark #quarto-header > nav.navbar .navbar-brand,
+  body.quarto-dark #quarto-header > nav.navbar a.navbar-brand,
+  body.quarto-dark #quarto-header > nav.navbar a.navbar-brand-logo {
+    background-image: url('/assets/Logo_WR_mark_dark.svg') !important;
   }
 
   #quarto-header > nav.navbar {
