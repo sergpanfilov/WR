@@ -350,12 +350,16 @@ body {
     // When the burger is OPEN, the .navbar-collapse becomes a horizontal
     // strip below the navbar — single row with lang switchers on the left
     // and About link pushed to the right edge.
+    //
+    // Use px (not rem) for horizontal padding so it matches the navbar's
+    // own 20px padding regardless of how Bootstrap recomputes rem inside
+    // nested contexts.
     .navbar-collapse.show,
     .navbar-collapse.collapsing {
       display: flex !important;
       width: 100% !important;
       margin: 0 !important;
-      padding: 0.875rem 1.25rem !important;
+      padding: 14px 20px !important;
       flex-basis: 100%;
       border-top: 1px solid $rule-color;
 
@@ -364,10 +368,13 @@ body {
         align-items: center !important;
         gap: 1.5rem;
         width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
       }
 
       .nav-item {
         width: auto;
+        padding: 0 !important;
 
         // Push the last item (About) to the right edge
         &:last-child {
@@ -405,14 +412,28 @@ body {
     }
 
     // Equal spacing between the right-side icons (search / theme / burger).
-    // Each icon button has its own padding; we want consistent gaps between
-    // them, so we control margins explicitly instead of relying on padding.
+    // Make each icon-button a fixed square (40×40) with no extra margins,
+    // and rely on a consistent gap by flushing them with no margin-right.
     .type-overlay,
-    .quarto-search {
-      margin-right: 0.5rem !important;
+    .quarto-search,
+    .quarto-navbar-tools,
+    .quarto-color-scheme-toggle,
+    .navbar-toggler {
+      padding: 0.5rem !important;
+      margin: 0 !important;
+      width: 40px !important;
+      height: 40px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex: 0 0 40px !important;
     }
+
+    // .quarto-navbar-tools is a wrapper around the toggle; the inner
+    // button (.quarto-color-scheme-toggle) is what we actually size.
+    // Reset the wrapper so it doesn't add its own padding.
     .quarto-navbar-tools {
-      margin-right: 0.5rem !important;
+      padding: 0 !important;
     }
 
     // Compact paddings for the icons/buttons on mobile.
