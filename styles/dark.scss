@@ -38,7 +38,9 @@ html {
 }
 
 // Navbar — same cream-on-cream concept inverts cleanly to dark-on-dark.
-.navbar {
+// Use the same ID-level specificity selector as custom.scss
+// (#quarto-header > nav.navbar) so dark rules win over light ones.
+#quarto-header > nav.navbar {
   background: #1A1A1A !important;
   border-bottom-color: #2D2D2D !important;
 
