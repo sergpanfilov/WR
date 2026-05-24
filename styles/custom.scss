@@ -301,19 +301,6 @@ body {
     }
   }
 
-@media (max-width: 640px) {
-  // Align content left edge with navbar logo (~20px from screen edge)
-  main.content {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
-  }
-
-  // Intro block: red border flush with logo, text starts right after border
-  .intro {
-    padding-left: 0.75rem !important;
-  }
-}
-
   // In dark mode, swap the mark to its dark-theme variant.
   body.quarto-dark #quarto-header > nav.navbar .navbar-brand-container::before,
   body.quarto-dark #quarto-header > nav.navbar .navbar-brand::before {
@@ -901,9 +888,13 @@ footer.footer,
 }
 
 @media (max-width: 640px) {
-  // Align content left edge with navbar logo (~20px from screen edge)
+  // Quarto wraps page content in a CSS grid with sidebar gutter columns
+  // (~30px on each side) even when no sidebar is present. On mobile this
+  // pushes main content inward and misaligns it with the navbar logo.
+  // Stretch main from screen-start to screen-end to kill the gutters.
   main.content {
-    padding-left: 1.25rem !important;
+    grid-column: screen-start / screen-end !important;
+    padding-left: 1.25rem !important;   // ~20px, matches navbar padding
     padding-right: 1.25rem !important;
   }
 
