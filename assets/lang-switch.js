@@ -1,16 +1,30 @@
-// Language switcher for navbar EN/RU/BE links.
+// Language switcher for navbar EN/RU/BE links + About label localization.
 //
 // Site structure: parallel trees under /en/, /ru/, /be/ with mirrored
-// filenames. When user is on /en/some-article.html and clicks "RU", we
-// want to go to /ru/some-article.html — NOT to /ru/ (the home page).
+// filenames. About pages live at /en/about.html, /ru/about.html,
+// /be/about.html.
 //
-// Strategy: intercept clicks on EN/RU/BE nav links, compute the target
-// URL by swapping the language segment, then fetch HEAD to check if the
-// translated page exists. If yes, navigate there; if no (404), fall
-// back to the language home (/ru/, /en/, /be/).
+// Two responsibilities:
+//   1. Intercept clicks on EN/RU/BE links and route to the same article
+//      under the target language (with 404 fallback to language home).
+//   2. Localize the "About" nav item label and href based on the current
+//      page's language.
 
 (function () {
   const LANGS = ['en', 'ru', 'be'];
+
+  // Localised About labels by current page language.
+  const ABOUT_LABELS = {
+    en: 'About',
+    ru: 'О проекте',
+    be: 'Пра праект',
+  };
+
+  // Detect current page language from URL prefix.
+  function currentLang() {
+    const m = window.location.pathname.match(/^\/(en|ru|be)(\/|$)/);
+    return m ? m[1] : 'en';
+  }
 
   // Match navbar links by their visible text (EN / RU / BE), case-insensitive.
   function isLangLink(a) {
@@ -18,13 +32,11 @@
     return LANGS.includes(text);
   }
 
-  // Get the language code from a link's text.
   function langOf(a) {
     return (a.textContent || '').trim().toLowerCase();
   }
 
   // Swap the leading /xx/ segment in the current path for the target lang.
-  // If the current path has no recognised lang prefix, just return /target/.
   function buildTargetUrl(targetLang) {
     const path = window.location.pathname;
     const match = path.match(/^\/(en|ru|be)(\/.*)?$/);
@@ -32,11 +44,9 @@
       const rest = match[2] || '/';
       return '/' + targetLang + rest;
     }
-    // No recognised prefix — go to that language's home.
     return '/' + targetLang + '/';
   }
 
-  // Check if a URL exists (HEAD request, 200-ish).
   async function urlExists(url) {
     try {
       const res = await fetch(url, { method: 'HEAD' });
@@ -46,7 +56,33 @@
     }
   }
 
-  function attachHandlers() {
+  // Locate the About link in the navbar. Match by href ending in
+  // /about.html or by text being one of the known About labels.
+  function findAboutLink() {
+    const links = document.querySelectorAll('#quarto-header a, .navbar a');
+    for (const a of links) {
+      const href = a.getAttribute('href') || '';
+      const text = (a.textContent || '').trim();
+      if (
+        /\/about(\.html)?$/.test(href) ||
+        Object.values(ABOUT_LABELS).includes(text)
+      ) {
+        return a;
+      }
+    }
+    return null;
+  }
+
+  // Rewrite the About link's label and href to match the current language.
+  function localizeAboutLink() {
+    const lang = currentLang();
+    const a = findAboutLink();
+    if (!a) return;
+    a.textContent = ABOUT_LABELS[lang];
+    a.setAttribute('href', '/' + lang + '/about.html');
+  }
+
+  function attachLangSwitchHandlers() {
     const links = document.querySelectorAll('#quarto-header a, .navbar a');
     links.forEach((a) => {
       if (!isLangLink(a)) return;
@@ -58,17 +94,20 @@
         const target = langOf(a);
         const candidate = buildTargetUrl(target);
         const fallback = '/' + target + '/';
-
-        // Try the translated URL first; fall back to language home on 404.
         const ok = await urlExists(candidate);
         window.location.href = ok ? candidate : fallback;
       });
     });
   }
 
+  function init() {
+    localizeAboutLink();
+    attachLangSwitchHandlers();
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', attachHandlers);
+    document.addEventListener('DOMContentLoaded', init);
   } else {
-    attachHandlers();
+    init();
   }
 })();
