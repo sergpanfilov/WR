@@ -61,6 +61,25 @@ html {
     }
   }
 
+  // Search button — Algolia's internal wrapper hardcodes color to
+  // $body-color, which compiles to #1A1A1A in both themes. Override
+  // here so the SVG (using fill: currentColor) inherits a visible tone.
+  .quarto-search,
+  .type-overlay,
+  .aa-DetachedSearchButton,
+  .aa-DetachedSearchButton .aa-DetachedSearchButtonIcon {
+    color: #777777 !important;
+  }
+
+  .quarto-search:hover,
+  .type-overlay:hover {
+    color: #FEFDF8 !important;
+
+    .aa-DetachedSearchButtonIcon {
+      color: #FEFDF8 !important;
+    }
+  }
+
   // Color scheme toggle icon — override the background-image with a
   // light fill so the icon is visible against the dark navbar. Same
   // four-state matrix as in custom.scss, but with light colours.
