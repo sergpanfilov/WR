@@ -1,6 +1,6 @@
 ---
 title: "White Ribbon"
-description: "Essays on state craft and citizenship"
+description: "Essays on state craft and civil society"
 format:
   html:
     page-layout: full
