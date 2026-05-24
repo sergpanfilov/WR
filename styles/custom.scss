@@ -277,8 +277,11 @@ body {
 
     .navbar-brand-container,
     .navbar-brand {
-      // Hide the big horizontal logo on mobile entirely; replace with
-      // a compact mark (W|R) shown as a background-image on the parent.
+      // Hide ALL Quarto-generated logo links on mobile (there can be
+      // two: navbar-brand-logo for the image, and navbar-brand as text
+      // fallback). Replace with a compact mark on the parent via ::before.
+      a.navbar-brand,
+      a.navbar-brand-logo,
       img.navbar-logo {
         display: none !important;
       }
