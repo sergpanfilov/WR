@@ -17,8 +17,9 @@ title-block-banner: false
 ---
 
 ::: {.intro}
-*White Ribbon* publishes long-form essays on democratic institutions, regime
-change, and the practice of citizenship under pressure. Our editorial
-inheritance is the work of Steven Levitsky and Daniel Ziblatt — but our
-ambition is to read the present.
+White Ribbon publishes essays on the nominal and actual democratic institutions 
+of emigration, on the conditions and prospects of national diasporas in exile. 
+The aim of this writing is to bring about systemic change and a new quality 
+of life for Belarusians abroad.
+
 :::
