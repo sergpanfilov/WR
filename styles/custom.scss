@@ -351,15 +351,16 @@ body {
     // strip below the navbar — single row with lang switchers on the left
     // and About link pushed to the right edge.
     //
-    // Use px (not rem) for horizontal padding so it matches the navbar's
-    // own 20px padding regardless of how Bootstrap recomputes rem inside
-    // nested contexts.
+    // Horizontal padding is zero: the navbar itself already has 20px
+    // horizontal padding, so .navbar-collapse spans the inner width.
+    // This way EN aligns flush left with the W of the logo, and "About"
+    // aligns flush right with the burger/X.
     .navbar-collapse.show,
     .navbar-collapse.collapsing {
       display: flex !important;
       width: 100% !important;
       margin: 0 !important;
-      padding: 14px 20px !important;
+      padding: 14px 0 !important;
       flex-basis: 100%;
       border-top: 1px solid $rule-color;
 
