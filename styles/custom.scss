@@ -902,4 +902,42 @@ footer.footer,
   .intro {
     padding-left: 0.75rem !important;
   }
+
+  // === LISTING CARDS METADATA — stacked on mobile ===
+  // Desktop shows date and reading-time on one line with a red-dot
+  // separator between them. On mobile, stack them: each on its own line
+  // with a red dot at the start.
+  .quarto-post .metadata {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.25rem;
+
+    // Add a leading red dot before each metadata item
+    .listing-date::before,
+    .listing-reading-time::before {
+      content: "" !important;
+      display: inline-block !important;
+      width: 3px;
+      height: 3px;
+      background: $accent;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin: 0 0.6rem 0 0 !important;
+    }
+  }
+
+  // === BYLINE (article header) — stacked on mobile ===
+  // Same idea: author, date, reading-time each on its own line with a
+  // leading red dot. Desktop uses .sep::before between items; on mobile
+  // we repurpose .sep to start each line.
+  .byline {
+    .sep {
+      display: block;
+      margin: 0.25rem 0 0;
+
+      &::before {
+        margin: 0 0.6rem 0 0;
+      }
+    }
+  }
 }
