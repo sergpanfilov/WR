@@ -1,13 +1,13 @@
 /*-- scss:defaults --*/
 
 // === COLOURS ===
-$body-bg:        #FEFDF8;
-$body-color:     #1A1A1A;
-$link-color:     #C8202A;
-$accent:         #C8202A;
-$rule-color:     #E0DDD5;
-$muted:          #888888;
-$muted-dark:     #AAAAAA;
+$body-bg:        #FEFDF8 !default;
+$body-color:     #1A1A1A !default;
+$link-color:     #C8202A !default;
+$accent:         #C8202A !default;
+$rule-color:     #E0DDD5 !default;
+$muted:          #888888 !default;
+$muted-dark:     #AAAAAA !default;
 
 // === BOOTSTRAP NAVBAR — light theme ===
 // These variables drive the colour of all navbar icons including the
