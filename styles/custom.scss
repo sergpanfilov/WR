@@ -899,3 +899,16 @@ footer.footer,
     font-size: 4rem;
   }
 }
+
+@media (max-width: 640px) {
+  // Align content left edge with navbar logo (~20px from screen edge)
+  main.content {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  // Intro block: red border flush with logo, text starts right after border
+  .intro {
+    padding-left: 0.75rem !important;
+  }
+}
