@@ -80,6 +80,20 @@ html {
     }
   }
 
+  // Match Quarto/Algolia's own high-specificity rule that paints the
+  // submit icon SVG. Theirs is `.navbar #quarto-search.type-overlay
+  // .aa-Autocomplete svg.aa-SubmitIcon { color: #1A1A1A }`. We mirror
+  // it with the same specificity (or higher via !important) so the SVG
+  // inherits a visible colour through fill: currentColor.
+  #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon,
+  .navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
+    color: #777777 !important;
+  }
+
+  &:hover #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
+    color: #FEFDF8 !important;
+  }
+
   // Color scheme toggle icon — override the background-image with a
   // light fill so the icon is visible against the dark navbar. Same
   // four-state matrix as in custom.scss, but with light colours.
