@@ -387,16 +387,32 @@ body {
     // icon and theme toggle sit on the same baseline regardless of
     // their differing internal heights.
     .navbar-container {
-      flex-wrap: nowrap !important;
+      flex-wrap: wrap !important;       // allow .navbar-collapse to drop below
       align-items: center !important;
+      row-gap: 0;
 
       .navbar-brand-container,
-      .navbar-brand-container.mx-auto { order: 1; }
+      .navbar-brand-container.mx-auto {
+        order: 1;
+        width: auto !important;          // mx-auto sets width: 100% which kills the logo
+        flex: 0 0 auto !important;
+      }
       .type-overlay,
       .quarto-search                  { order: 2; margin-left: auto !important; display: flex !important; align-items: center !important; }
       .quarto-navbar-tools            { order: 3; display: flex !important; align-items: center !important; }
-      .navbar-toggler                 { order: 4; margin-left: 0.25rem; display: flex !important; align-items: center !important; justify-content: center !important; }
-      .navbar-collapse                { order: 5; }    // wraps below
+      .navbar-toggler                 { order: 4; display: flex !important; align-items: center !important; justify-content: center !important; }
+      .navbar-collapse                { order: 5; flex-basis: 100% !important; }    // wraps below
+    }
+
+    // Equal spacing between the right-side icons (search / theme / burger).
+    // Each icon button has its own padding; we want consistent gaps between
+    // them, so we control margins explicitly instead of relying on padding.
+    .type-overlay,
+    .quarto-search {
+      margin-right: 0.5rem !important;
+    }
+    .quarto-navbar-tools {
+      margin-right: 0.5rem !important;
     }
 
     // Compact paddings for the icons/buttons on mobile.
