@@ -1,6 +1,6 @@
 ---
 title: "Белая стужка"
-subtitle: "Эсэ пра дзяржаўны лад і грамадзянства"
+subtitle: "Эсэ пра віртуальныя дзяржавы і дыяспары"
 lang: be
 listing:
   contents: posts

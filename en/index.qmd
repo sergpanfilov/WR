@@ -1,6 +1,6 @@
 ---
 title: "White Ribbon"
-subtitle: "Essays on State Craft and Citizenship"
+subtitle: "Essays on virtual states and diasporas"
 lang: en
 listing:
   contents: posts
