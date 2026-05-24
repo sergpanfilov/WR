@@ -1,0 +1,781 @@
+/*-- scss:defaults --*/
+
+// === COLOURS ===
+$body-bg:        #FEFDF8;
+$body-color:     #1A1A1A;
+$link-color:     #C8202A;
+$accent:         #C8202A;
+$rule-color:     #E0DDD5;
+$muted:          #888888;
+$muted-dark:     #AAAAAA;
+
+// === BOOTSTRAP NAVBAR — light theme ===
+// These variables drive the colour of all navbar icons including the
+// dark-mode toggle, which renders as a Bootstrap Icons SVG embedded
+// in a data: background-image. Setting colour via .nav-link {color}
+// won't work on the toggle — only these SCSS variables do.
+$navbar-light-color:        #888888;
+$navbar-light-hover-color:  #1A1A1A;
+$navbar-light-active-color: #1A1A1A;
+
+// === TYPOGRAPHY ===
+$font-family-sans-serif: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+$font-family-monospace:  "JetBrains Mono", ui-monospace, monospace;
+$font-family-serif:      "Source Serif 4", Georgia, serif;
+$font-family-display:    "Exo 2", "IBM Plex Sans", sans-serif;
+
+$font-family-base: $font-family-serif;
+
+$font-size-base: 1.25rem;   // 20px
+$line-height-base: 1.7;
+
+$h1-font-size: 3.25rem;
+$h2-font-size: 1.75rem;
+$h3-font-size: 1.375rem;
+
+// === CONTAINER ===
+$content-padding-top: 4rem;
+
+/*-- scss:rules --*/
+
+// === RESET / BASE ===
+
+html {
+  font-feature-settings: "kern", "liga", "calt", "onum", "tnum" 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $body-bg;
+
+  // Reserve space for the scrollbar even when content doesn't overflow,
+  // so opening search overlay (or any modal that locks body scroll)
+  // doesn't shift the page sideways.
+  scrollbar-gutter: stable;
+}
+
+body {
+  background: $body-bg;
+  color: $body-color;
+  font-family: $font-family-serif;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
+
+// === NAVBAR ===
+
+#quarto-header > nav.navbar {
+  background: $body-bg !important;
+  border-bottom: 1px solid $rule-color;
+
+  // Quarto sets `padding-left/right: 1em` on `#quarto-header > nav`
+  // with ID-level specificity, which overrides Bootstrap's variable-
+  // based .navbar padding rule. We use the same selector (with the
+  // .navbar class added for one extra specificity point) and set the
+  // padding directly.
+  padding: 1.75rem 5rem;
+  min-height: 140px;
+
+  // Bootstrap's .container-fluid inside the navbar adds its own
+  // horizontal padding via --bs-gutter-x. Zero it so our padding is
+  // the only horizontal one.
+  --bs-gutter-x: 0;
+
+  .navbar-container,
+  > .container,
+  > .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  // Kill the global red link-underline inside the navbar.
+  // The navbar has its own visual language and shouldn't inherit
+  // the editorial accent underlining used in article body text.
+  a {
+    border-bottom: none !important;
+
+    &:hover {
+      border-bottom: none !important;
+    }
+  }
+
+  .navbar-brand-container,
+  .navbar-brand {
+    img.navbar-logo {
+      max-height: 72px;
+      width: auto;
+      display: block;
+    }
+
+    // Hide the duplicate text "White Ribbon" next to the SVG logo —
+    // the logo already contains the wordmark.
+    .navbar-title {
+      display: none;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      font-family: $font-family-monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: $muted !important;
+      padding: 0.5rem 1rem;
+      transition: color 0.15s ease;
+
+      &:hover,
+      &.active {
+        color: $body-color !important;
+      }
+    }
+
+    // The last menu item (ABOUT) sits at the navbar's right edge.
+    // Drop its right click-padding so the visible letter aligns with
+    // the navbar's right padding boundary (5rem) — matching the logo
+    // on the left.
+    .nav-item:last-child .nav-link {
+      padding-right: 0;
+    }
+  }
+
+  // === NAVBAR LAYOUT ===
+  // Real Quarto DOM (verified in DevTools):
+  //   .navbar > .navbar-container.container-fluid (flex)
+  //     .navbar-brand-container          ← logo
+  //     .navbar-toggler                  ← mobile hamburger
+  //     .navbar-collapse                 ← contains .navbar-nav (menu)
+  //     .quarto-navbar-tools             ← color scheme toggle
+  //                                        (sibling of navbar-collapse,
+  //                                         NOT inside it)
+  //
+  // We want: [logo] ............ [⊙ EN RU BE ABOUT]
+  // — logo flush left, right cluster flush right.
+  //
+  // Trick: with `justify-content: flex-start`, all children pack to
+  // the left. To push the right cluster all the way to the right edge,
+  // we put `margin-left: auto` on the FIRST element of the right
+  // cluster (the toggle, after reordering). This consumes all available
+  // space between logo and toggle, pushing the toggle + menu to the
+  // far right. Menu items follow the toggle with their normal padding.
+
+  .navbar-container {
+    justify-content: flex-start !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+
+    .navbar-brand-container,
+    .navbar-brand-container.mx-auto { order: 1; }
+    .type-overlay,
+    .quarto-search                  { order: 2; margin-left: auto !important; }
+    .quarto-navbar-tools            { order: 3; }
+    .navbar-collapse                { order: 4; }
+  }
+
+  // === SEARCH BUTTON ===
+  // The search trigger is a Quarto/Algolia <svg> with fill: currentColor.
+  // Tone it down to match the muted weight of the menu items and the
+  // theme toggle — same visual register, no domination.
+  .type-overlay,
+  .quarto-search {
+    color: $muted;
+    padding: 0.5rem 1rem !important;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: $body-color;
+    }
+
+    .aa-DetachedSearchButton,
+    .aa-Autocomplete {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      color: inherit;
+    }
+
+    .aa-SubmitIcon,
+    svg {
+      width: 16px !important;
+      height: 16px !important;
+      stroke-width: 1.5 !important;
+    }
+  }
+
+  // Pin logo to the left edge — no auto margins, no left padding.
+  .navbar-brand-container,
+  .navbar-brand-container.mx-auto {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  // Hide the mobile hamburger on desktop.
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  @media (max-width: 991px) {
+    .navbar-toggler { display: inline-block !important; }
+  }
+
+  // Right cluster: collapse stays compact, toggle has no internal margin.
+  .navbar-collapse {
+    flex-grow: 0 !important;
+    width: auto !important;
+  }
+
+  .quarto-navbar-tools {
+    padding: 0 !important;
+  }
+
+  // === COLOR SCHEME TOGGLE — PLACEMENT ===
+  // Order handled above. Padding/margin handled below in toggle styling.
+
+  // === COLOR SCHEME TOGGLE — APPEARANCE ===
+  // Quarto's dark-mode toggle is a Bootstrap Icons SVG embedded in a
+  // background-image with a colour baked at SCSS-compile time. We
+  // override it explicitly so we don't depend on which navbar
+  // variable Bootstrap picks up.
+  //
+  // There are two states: `:not(.alternate)` (default, showing the
+  // OPPOSITE mode you can switch to) and `.alternate` (after click).
+
+  .quarto-color-scheme-toggle {
+    padding: 0.5rem 1rem !important;  // match .nav-link padding
+    margin: 0 !important;
+
+    .bi::before {
+      width: 16px;
+      height: 16px;
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23888888" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>') !important;
+    }
+
+    &:hover .bi::before {
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231A1A1A" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>') !important;
+    }
+
+    &.alternate .bi::before {
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23888888" class="bi bi-toggle-on" viewBox="0 0 16 16"><path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>') !important;
+    }
+
+    &.alternate:hover .bi::before {
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%231A1A1A" class="bi bi-toggle-on" viewBox="0 0 16 16"><path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>') !important;
+    }
+  }
+}
+
+// Mobile: smaller logo so it fits in narrow viewports
+@media (max-width: 640px) {
+  .navbar {
+    padding: 1rem 1.25rem;
+    min-height: 80px;
+
+    .navbar-brand img.navbar-logo {
+      max-height: 44px;
+    }
+  }
+}
+
+// === PAGE LAYOUT ===
+
+main.content,
+.quarto-container,
+#quarto-content {
+  background: $body-bg;
+}
+
+article.page-columns,
+.page-columns > main {
+  max-width: none;
+}
+
+// Single source of truth for the article column: <main> itself.
+// Everything inside flows naturally to its full width — no per-child
+// padding, no nested centring rules, no caskading conflicts.
+main#quarto-document-content,
+#quarto-document-content {
+  max-width: 36em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-sizing: border-box;
+}
+
+// Sections (Quarto wraps each ## heading and its content in <section>)
+// must not introduce their own width or padding — they're transparent
+// containers that inherit the column from <main>.
+main#quarto-document-content section,
+#quarto-document-content section {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+// === TITLE BLOCK (article header) ===
+// We disable Quarto's automatic title block entirely. Every essay
+// renders its own header inside the .qmd using .kicker, .essay-title,
+// .essay-deck, and .byline blocks (see CUSTOM BLOCKS below).
+// YAML title/subtitle/author/date remain in frontmatter — they're used
+// for listings, RSS, OG tags, and the browser tab title, but not rendered
+// in the article body.
+
+.quarto-title-block,
+header#title-block-header,
+.quarto-title,
+.quarto-title-meta,
+.quarto-title-banner {
+  display: none !important;
+}
+
+// === THEME TOGGLE BUTTON ===
+// Quarto's built-in light/dark toggle is a Bootstrap Icons SVG rendered
+// as a CSS background-image — its colour cannot be set via `color`,
+// `fill`, or `stroke`. The only way to change it is via the SCSS
+// variables $navbar-light-color and $navbar-dark-color, which are
+// defined in the defaults section at the top of this file (and
+// overridden for dark mode in dark.scss).
+
+// === ARTICLE BODY ===
+
+article {
+  p {
+    margin-bottom: 1.5rem;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  // Drop cap on first paragraph only
+  .dropcap-paragraph::first-letter,
+  > p:first-of-type::first-letter {
+    font-family: $font-family-display;
+    font-weight: 100;
+    float: left;
+    font-size: 5.5rem;
+    line-height: 0.85;
+    padding-right: 0.6rem;
+    padding-top: 0.4rem;
+    color: $body-color;
+  }
+}
+
+// Section headings inside articles
+article h2 {
+  font-family: $font-family-serif;
+  font-weight: 700;
+  font-size: 1.75rem;
+  letter-spacing: -0.01em;
+  margin-top: 3.5rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+article h3 {
+  font-family: $font-family-serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.375rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+// === BLOCKQUOTES ===
+
+blockquote {
+  border-left: 3px solid $accent;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: lighten($body-color, 15%);
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// === LINKS ===
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  border-bottom: 1px solid rgba($link-color, 0.3);
+  transition: border-color 0.15s ease;
+
+  &:hover {
+    border-bottom-color: $link-color;
+  }
+}
+
+// === FOOTNOTES ===
+
+.footnotes {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid $rule-color;
+  font-size: 0.95rem;
+  line-height: 1.55;
+
+  ol {
+    padding-left: 1.25rem;
+  }
+}
+
+sup a,
+.footnote-ref a {
+  font-size: 0.75em;
+  vertical-align: super;
+  line-height: 0;
+  color: $accent;
+  border-bottom: none;
+  padding: 0 0.1em;
+}
+
+// === LISTING (home page) ===
+
+.intro {
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.55;
+  color: lighten($body-color, 20%);
+  max-width: 36em;
+  margin: 2rem auto 4rem;
+  padding: 0 1.5rem;
+  border-left: 3px solid $accent;
+  padding-left: 1.5rem;
+}
+
+.quarto-listing {
+  max-width: 36em;
+  margin: 0 auto 5rem;
+  padding: 0 1.5rem;
+
+  // Each listing-item is a Quarto .quarto-post.image-right div that's
+  // display: flex (body on left, image area on right). Since we have
+  // no images in this editorial project, we force the card into a
+  // single vertical column with tight spacing (compact-stack variant).
+  .quarto-post {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    border-bottom: 1px solid $rule-color;
+    padding: 1rem 0;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .metadata { order: 1; margin-bottom: 0.4rem !important; }
+    .body     { order: 2; }
+  }
+
+  // .body holds title + subtitle. .metadata holds date + reading-time
+  // (wrapped in an <a>). Reset their flex behaviour.
+  .quarto-post .body,
+  .quarto-post .metadata {
+    display: block !important;
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  // Inside .metadata: put .listing-date and .listing-reading-time on
+  // the SAME LINE with a red-dot separator between them. Quarto wraps
+  // each field in its own div (block), so we force them inline-block
+  // so flex-direction: row actually places them side by side.
+  .quarto-post .metadata {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 0.4rem !important;
+
+    .listing-date,
+    .listing-reading-time {
+      display: inline-block !important;
+      width: auto !important;
+    }
+
+    // Red-dot separator between the date and the reading-time spans.
+    .listing-reading-time::before {
+      content: "";
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      background: $accent;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin: 0 0.75rem;
+    }
+  }
+
+  // Kill the global red underline on every link inside listing cards.
+  a,
+  a:hover {
+    border-bottom: none !important;
+    text-decoration: none !important;
+  }
+}
+
+// Now style the inner pieces with editorial typography.
+.quarto-listing .quarto-post {
+  .listing-date {
+    font-family: $font-family-monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $muted;
+    margin-bottom: 0 !important;   // sits on the same line as reading-time now
+  }
+
+  .listing-reading-time {
+    font-family: $font-family-monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $muted;
+  }
+
+  .listing-title {
+    font-family: $font-family-serif;
+    font-weight: 700;
+    font-size: 1.625rem;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 0.25rem;
+    color: $body-color;
+
+    a {
+      color: $body-color;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+
+  .listing-subtitle {
+    font-family: $font-family-serif;
+    font-style: italic;
+    font-size: 1.0625rem;
+    line-height: 1.4;
+    color: lighten($body-color, 25%);
+    margin: 0;
+
+    a {
+      color: inherit;
+    }
+  }
+}
+
+// === CUSTOM BLOCKS ===
+// === Editorial title block (variant A, manual) ===
+// Used inside posts instead of Quarto's auto-generated title block,
+// which is disabled via `title-block-style: none` in _quarto.yml.
+
+.kicker {
+  font-family: $font-family-monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: $accent;
+  text-align: left;
+  margin: 4rem 0 1rem;
+}
+
+.essay-title {
+  font-family: $font-family-serif;
+  font-weight: 700;
+  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  text-align: left;
+  margin: 0 0 1rem;
+  color: $body-color;
+}
+
+.essay-deck,
+.deck {
+  font-family: $font-family-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 1.4;
+  color: lighten($body-color, 25%);
+  text-align: left;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  border: none;
+}
+
+// Thin horizontal rule between deck and byline
+.essay-title-block-rule {
+  border: none;
+  border-top: 1px solid $rule-color;
+  margin: 1.5rem 0;
+  max-width: none;
+}
+
+.byline {
+  font-family: $font-family-monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $muted;
+  text-align: left;
+  margin: 0 0 3rem;
+
+  strong {
+    color: $body-color;
+    font-weight: 400;
+  }
+
+  // Red dot separator between byline items.
+  // Plain inline rendering — no flex, so the whole byline wraps as one
+  // text line at narrow widths instead of breaking awkwardly.
+  .sep::before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 3px;
+    background: $accent;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 0.75rem;
+  }
+}
+
+.essay-end {
+  font-family: $font-family-monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $muted;
+  text-align: left;
+  margin: 3rem 0;
+}
+
+.language-gate {
+  text-align: center;
+  padding: 8rem 2rem;
+
+  h1 {
+    font-family: $font-family-display;
+    font-weight: 100;
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+  }
+
+  a {
+    font-family: $font-family-monospace;
+    font-size: 0.875rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    border-bottom: none;
+    padding: 0 0.5rem;
+  }
+}
+
+// === HORIZONTAL RULES ===
+
+hr {
+  border: none;
+  border-top: 1px solid $rule-color;
+  margin: 3rem auto;
+  max-width: 6rem;
+}
+
+// === FOOTER ===
+
+// External footer container: <footer class="footer">. This is the
+// element that draws the editorial top rule and provides horizontal
+// padding 5rem (matching the navbar). Inner <div class="nav-footer">
+// must NOT add its own padding — otherwise the two pad layers stack.
+footer.footer,
+.footer {
+  background: $body-bg !important;
+  border-top: 1px solid $rule-color;
+  padding: 2.5rem 5rem;          // 80px horizontal, matches navbar
+  font-family: $font-family-monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: $muted;
+
+  // Strip the inner .nav-footer's own padding so we don't double-up.
+  .nav-footer {
+    padding: 0;
+    background: transparent;
+  }
+
+  // Each of the three flex children — left/center/right — should not
+  // add internal padding either.
+  .nav-footer-left,
+  .nav-footer-center,
+  .nav-footer-right {
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    color: $muted;
+    border-bottom: none;
+
+    &:hover {
+      color: $body-color;
+      border-bottom: none;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  footer.footer,
+  .footer {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+.footer-mark,
+.footer-meta {
+  font-family: $font-family-monospace;
+}
+
+// === CALLOUTS (used on placeholder pages) ===
+
+.callout {
+  border-left: 3px solid $accent;
+  background: rgba($accent, 0.04);
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 36em;
+  font-family: $font-family-serif;
+  font-size: 1rem;
+
+  .callout-title {
+    display: none;
+  }
+}
+
+// === RESPONSIVE ===
+
+@media (max-width: 640px) {
+  body {
+    font-size: 1.125rem;
+  }
+
+  .quarto-title h1.title {
+    font-size: 2rem;
+  }
+
+  article .dropcap-paragraph::first-letter,
+  article > p:first-of-type::first-letter {
+    font-size: 4rem;
+  }
+}

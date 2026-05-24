@@ -1,0 +1,24 @@
+---
+title: "White Ribbon"
+subtitle: "Essays on State Craft and Citizenship"
+lang: en
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, subtitle, reading-time]
+  date-format: "MMMM D, YYYY"
+  feed: true
+page-layout: article
+title-block-banner: false
+---
+
+::: {.intro}
+*White Ribbon* publishes long-form essays on democratic institutions, regime
+change, and the practice of citizenship under pressure. Our editorial
+inheritance is the work of Steven Levitsky and Daniel Ziblatt — but our
+ambition is to read the present.
+:::

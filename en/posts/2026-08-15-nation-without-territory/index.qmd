@@ -1,0 +1,674 @@
+---
+title: "A Nation Without Territory"
+subtitle: "On collective capital and the self-organisation of the Belarusian diaspora"
+description: "An essay on a new form of organising a distributed diaspora — an extraterritorial capitalised network capable of existing in an age when the role of human labour is in decline."
+author: "Alexei Yerokhovets"
+date: "2026-08-15"
+date-format: "MMMM D, YYYY"
+categories: [essay, diaspora]
+reading-time: true
+lang: en
+---
+
+::: {.kicker}
+Guest Essay · Specially for Aspen
+:::
+
+::: {.essay-title}
+A Nation Without Territory
+:::
+
+::: {.essay-deck}
+On collective capital and the self-organisation of the Belarusian diaspora.
+:::
+
+<hr class="essay-title-block-rule">
+
+::: {.byline}
+By [**Alexei Yerokhovets**]{} [August 15, 2026]{.sep} [18 min read]{.sep}
+:::
+
+::: {.dropcap-paragraph}
+Precise data on the scale of Belarusian emigration after 2020 does
+not exist. Different sources cite figures ranging from several
+hundred thousand to more than a million people. In this case, however,
+what matters is not statistical precision but the sheer scale of what
+has happened. Over a few short years Belarus has lost a significant
+share of its active, educated, and economically self-sufficient
+population.
+:::
+
+There are also growing signs that this is not a temporary wave of
+emigration, after which people will quickly return home, but the
+formation of a new distributed diaspora — a significant portion of
+which will remain outside Belarus for years or decades. Many have
+already built new lives, brought their families, started businesses,
+sent their children to schools in other countries. For others, return
+remains emotionally desirable but an increasingly unrealistic
+practical scenario.
+
+Poland has become the principal destination of this emigration. It
+is here that a particularly large number of Belarusians have
+gathered — people who are close to one another in language, culture,
+and historical experience. But along with opportunities, emigration
+has brought a serious crisis of agency. Arriving in a new country, a
+person often loses not only their familiar daily life but also the
+social capital accumulated over years: professional reputation,
+connections, access to financing, an intelligible system of trust.
+
+As a result, a successful entrepreneur may suddenly find himself
+unable to open a bank account or obtain a lease. A department head,
+an engineer, or a specialist with many years of experience discovers
+that on the new market his professional history means almost
+nothing. People who were only recently creating jobs and managing
+projects often find themselves forced to start life over with
+low-skilled work and a constant sense of the provisionality of their
+own position.
+
+This emigration problem has coincided with a much larger process —
+a global change in the technological order. The world is rapidly
+entering an era in which human labour is gradually ceasing to be the
+principal source of economic value. The development of artificial
+intelligence, automation, and robotics is already beginning to
+transform the labour market faster than states can adapt their social
+and economic models.
+
+Over the coming decades, more and more professions will either
+disappear entirely or sharply lose their value. This means that the
+classical life model of the modern person — education, work, salary,
+pension — may prove as temporary a historical phenomenon as factory
+labour in the nineteenth century. Increasingly, what will matter is
+not the ability to sell one's working time but one's access to
+capital and productive assets.
+
+Major capital already operates by different rules. Wealthy people
+rarely live on a salary. They own assets, draw on the growth of their
+value, gain access to cheap credit secured by property, and preserve
+capital within their structures, minimising its outflow. The ordinary
+person, meanwhile, remains tied to a model in which a significant
+share of the results of his labour is lost between taxes, inflation,
+and the cost of access to basic services.
+
+For Belarusian emigration this problem becomes doubled. We
+simultaneously face the loss of national grounding and the start of
+an era in which the very role of waged labour is becoming
+increasingly fragile. Under these conditions, the attempt simply to
+"integrate successfully" into existing systems may prove an
+insufficient strategy even for individual survival — to say nothing
+of preserving the community as such.
+
+> If a nation no longer has territory, its principal asset must
+> become collective capital and the capacity for self-organisation.
+
+It is around this idea that this essay is built. It is not an
+attempt to propose a utopia or to replace existing states. It is
+rather a search for a new form of organising a distributed diaspora
+— one that would allow Belarusians not only to survive individually
+in different countries but gradually to become a network of people
+capable of jointly defending their interests, creating capital,
+supporting one another, and forming their own institutions in a
+world where previous models of social organisation are rapidly losing
+stability.
+
+## Why the existing models do not work
+
+Moving to another country is not in itself a catastrophe. Millions
+of people around the world successfully emigrate, build new lives,
+start businesses, get an education, and become part of new societies.
+The problem of Belarusian emigration consists not so much in the
+fact of relocation itself as in the absence of mechanisms for
+collective adaptation and long-term self-organisation.
+
+Poland has given Belarusians significantly more opportunities than
+many other states. Here it has proved possible to legalise one's
+status relatively quickly, open a business, find work, get an
+education, or bring one's family. But it is important to acknowledge
+the obvious: even the most well-disposed state primarily serves its
+own interests and the interests of its own citizens.
+
+The Polish state is not obliged to build a system of support for the
+Belarusian diaspora that would compensate for the loss of social
+connections, professional capital, and access to familiar
+institutions. This is why many Belarusians continue to face problems
+that cannot be solved purely through formal mechanisms of
+integration: restrictions on banking services, difficulties obtaining
+credit and leases, discrimination in the housing and labour markets,
+the absence of political weight, and a weak understanding of one's
+legal possibilities.
+
+Individual successful integration does not, moreover, solve the
+problem of the community as a whole. Many Belarusians have
+undoubtedly been able to adapt: some have opened businesses, some
+have built careers, some have obtained citizenship or attained a
+high standard of living. But the success of individual people does
+not yet amount to the emergence of a stable system. Individual
+achievements do not create institutions, do not reduce the
+vulnerability of others, and do not form collective agency.
+
+Most existing émigré initiatives also have natural limits. Cultural
+projects help preserve language and identity. Political organisations
+perform an important representative function. Charitable initiatives
+help people through crises. But almost none of the existing models
+makes the creation of collective economic strength its principal
+task.
+
+A community that lacks its own capital, jobs, internal system of
+trust, and infrastructure of mutual support inevitably remains
+dependent on the external environment. As a result, emigration
+exists more as an aggregate of individual people of similar origin
+than as an organised system.
+
+One of the principal problems of the Belarusian diaspora is
+atomisation. We cooperate with one another economically relatively
+rarely, build long-term horizontal connections with difficulty, and
+possess almost no mechanisms of internal trust. Any joint project
+quickly encounters either conflicts, mutual distrust, or an inability
+to construct a stable system of governance. Within the emigration
+even its own term has emerged — *bulbosrach*, an apt description of
+the tendency to spend energy endlessly on internal conflicts instead
+of accumulating collective strength.
+
+The problem gradually extends, moreover, far beyond the emigration
+itself. Belarusians who remain inside the country and Belarusians
+abroad are diverging ever more sharply in life experience,
+information environment, and everyday interests. The emigration
+risks becoming a separate social stratum, gradually losing its
+connection with the majority of Belarusians inside Belarus itself.
+This is probably one of the most dangerous processes for the
+long-term existence of the nation as a unified community.
+
+The situation is further complicated by the fact that the world is
+entering a period of serious economic transformation. The growth of
+automation and artificial intelligence will intensify competition
+for jobs and reduce the value of many kinds of human labour. Under
+these conditions, the diaspora's fragmented existence makes it
+particularly vulnerable.
+
+History very rarely leaves room for neutral scenarios. Communities
+unable to create their own institutions, mechanisms of cooperation,
+and collective capital gradually dissolve into more organised
+systems. This is a natural historical process and requires no one's
+ill will.
+
+This is why the Belarusian diaspora needs to begin the transition
+from fragmented survival to institutionalised cooperation. Not as a
+form of isolation from the surrounding society, but as a way to
+transform from a set of separate émigrés into a community capable of
+systematically defending, strengthening, and capitalising itself.
+
+## The diaspora as a capitalised network
+
+For most of human history, the nation was indissolubly tied to
+territory. State borders defined the economy, the legal system,
+education, communication, and a person's belonging to the community.
+But the twenty-first century is gradually changing the very
+principle of social organisation. Digital technologies, global
+finance, remote work, and the development of artificial intelligence
+are progressively reducing the importance of geography as the
+determining factor of economic life.
+
+The Belarusian diaspora already exists today as a distributed
+network of people connected by a common language, culture, memory,
+and professional ties. We live in different countries and work in
+different jurisdictions, yet remain part of a single social space.
+The problem is that this network as yet possesses almost none of its
+own institutions, infrastructure of trust, or economic stability.
+
+The modern person still lives in the logic of the industrial
+twentieth century: education, work, salary, pension. But this model
+is becoming less and less stable. The modern model of waged labour
+secures a person's survival but relatively rarely allows him to
+accumulate long-term independence. Moreover, a significant share of
+the results of human labour is lost between taxes, the cost of
+servicing state systems, and the constant rise in the cost of
+living.
+
+The modern economic elite, meanwhile, has long lived by different
+rules. Major capital exists not on wages but on the ownership of
+assets, the growth of their value, and access to cheap credit
+secured by property. What is coming to matter more and more is not
+the ability to sell one's time but one's participation in systems
+that own productive assets.
+
+For a distributed diaspora this opens up a fundamentally different
+possibility of development. Instead of existing as a sum of separate
+émigrés competing with one another for a place within other people's
+systems, the Belarusian community could gradually begin building its
+own economic infrastructure. Such a system could provisionally be
+called *Veyshnoria Inc*[^1] — not a state in the classical sense, but
+an extraterritorial corporate network uniting Belarusians regardless
+of country of residence.
+
+[^1]: Veyshnoria is a fictional country invented in 2017 in the
+context of the Russian-Belarusian military exercises "Zapad-2017"
+as a notional adversary of the Russia–Belarus Union State. On the
+exercise maps it occupied the north-west of Belarus, roughly the
+Grodno region and parts of the Minsk region. Unexpectedly for the
+organisers, the idea of Veyshnoria became an internet meme: people
+began producing flags, coats of arms, "passports", maps, a tongue-in-cheek
+history, and even a "national identity" for it, often associating it
+with a more European-oriented, liberal, and culturally distinctive
+Belarus.
+
+This is not about creating a utopia or attempting to replace
+existing states. The police, criminal law, territorial security,
+and most administrative functions will inevitably remain with
+countries of residence. But a significant share of other functions
+could exist within the distributed system itself: investments,
+education, medical services, insurance, legal support, business
+infrastructure, internal mechanisms of trust and arbitration.
+
+The economic foundation of such a model could be the gradual
+transformation of its participants from exclusively waged workers
+into co-owners of collective capital. For example, a person would
+continue to receive part of his income in ordinary money — necessary
+for everyday life and for meeting the requirements of local
+legislation. Another part could come in the form of a share in the
+system — equity or an analogous instrument of participation in
+collective capital.
+
+In this model the principal priority becomes not maximum current
+consumption but the growth in value of common assets. Unlike the
+classical dividend model, which channels capital outwards and
+creates additional tax burden, the system could aim at preserving
+and continuously increasing capitalisation. Access to liquidity, in
+turn, would be provided through credit secured against the assets
+belonging to the participant — a mechanism long used by major
+capital but almost inaccessible to the ordinary person.
+
+The shares of such a system effectively begin to perform several
+functions at once. They become both a form of savings and an
+instrument of participation in the economic development of the
+community, and collateral for access to financing, and part of a
+long-term pension model. The person ceases to be exclusively a
+seller of his own labour and begins to participate in the growth of
+the system's productive assets.
+
+This transformation becomes particularly important against the
+backdrop of developments in artificial intelligence and robotics.
+In the foreseeable future, the human being will probably cease to be
+the basic productive unit of the economy. More and more functions,
+from physical labour to analytical and managerial work, will be
+performed by automated systems. This means that the very value of
+human labour will inevitably begin to decline. Already today many
+technological thinkers, including Sam Altman, are speaking of the
+need to find new mechanisms for distributing benefits in a world
+where a significant part of traditional employment may disappear.
+
+Under these conditions, ownership of capital that invests in new
+technologies and productive systems becomes not a question of luxury
+but a question of long-term survival. A community that has managed
+to turn its members into co-owners of such capital has a chance to
+preserve its stability even in a scenario of deep crisis in the
+traditional labour market.
+
+It is crucially important that such a system not be limited to
+emigration alone. One of the principal advantages of the
+extraterritorial model is the possibility of involving Belarusians
+regardless of their physical location. A person remaining in Belarus
+can also participate in the economic life of the system, work on
+its projects, invest, use its services, and become part of a common
+space of trust and cooperation. Territory gradually ceases to be the
+principal criterion of belonging to the community.
+
+The practical sense of such a structure lies not in a symbolic
+national idea, which every Belarusian inevitably understands in his
+own way, but in the creation of real advantages for its
+participants. The system must help a person become stronger: open
+businesses, find work, gain access to education, medical services,
+investments, legal protection, and professional connections. Within
+it may emerge its own clinics, educational projects, leasing and
+insurance companies, investment funds, and other services working
+primarily in the interests of the community's participants.
+
+The principal criterion of such a model's success should not be
+political declarations or the number of events held, but the
+community's capacity to create productive capital. The chief
+criterion of the system's success should be its ability to create a
+new economic reality: enterprises, jobs, investment mechanisms, and
+its own infrastructure of development. Only economic agency allows a
+community to preserve its stability over the long term.
+
+Such a model carries serious risks, of course: concentration of
+power, corruption, internal conflicts, populism, attempts to seize
+control or to transform the system into a closed elite structure.
+This is precisely why any mechanisms of such an organisation must
+from the outset be built around transparency, voluntary
+participation, separation of powers, and the possibility of constant
+public oversight.
+
+The very idea of a distributed capitalised network, however, no
+longer looks like fantasy. The world is gradually moving toward an
+era in which capital, technology, and the capacity for
+self-organisation are beginning to play a greater role than territory
+and traditional forms of state. Under these conditions, the
+Belarusian diaspora can either remain a sum of scattered émigrés or
+attempt to become a system capable of accumulating collective
+strength and providing its participants with a significantly higher
+level of stability, freedom, and mutual support.
+
+## A transitional model: what can be built right now
+
+The model described above may seem too ambitious or even utopian.
+But the main mistake of most attempts at long-term design lies in
+the desire to build the completed system all at once. In reality,
+stable institutions almost always arise gradually — out of practical
+solutions to specific problems.
+
+This is why the path to a notional *Veyshnoria Inc* should begin not
+with the creation of a "state of the future" but with the formation
+of useful cooperative infrastructure within the existing diaspora.
+
+First of all, one must acknowledge a simple thing: most people unite
+not around ideology but around practical benefit. Over recent years,
+the emigration has grown tired of endless political discussions,
+conflicts, and struggles for symbolic leadership. A person who finds
+himself in a new country usually needs much more down-to-earth
+things — work, housing, legal help, professional connections, an
+intelligible environment of trust, and the sense that he is not left
+alone with his problems.
+
+This is why usefulness must precede identity. Only practical value
+can transform an abstract community into a stable cooperative
+system.
+
+Even relatively simple mutual-aid infrastructure can already
+significantly strengthen the diaspora. This could involve creating a
+system of employment recommendations, a database of vacancies and
+verified employers, help with finding housing, consultations on
+legalisation, psychological support, mentorship programmes for new
+émigrés, and a network of verified specialists — lawyers,
+accountants, doctors, contractors, and entrepreneurs.
+
+The principal task of such infrastructure is to reduce the cost of
+emigration for one's own. A person should not have to go through the
+entire path of adaptation from scratch each time, losing years
+searching for information, contacts, and trusted people.
+
+But mutual aid alone is not enough. The principal deficit of the
+emigration often turns out to be neither money nor even
+opportunities, but trust. We are relatively bad at building
+long-term cooperation, since we possess almost no mechanisms for
+confirming reputation and reducing risks within the community. As a
+result, even talented and professional people often prefer to act
+alone, wary of conflicts, bad faith, or managerial chaos.
+
+This is why one of the key tasks of the future system should be the
+creation of internal reputational mechanisms. A history of
+participation in projects, a system of recommendations, confirmed
+professional reputation, mechanisms of mediation and voluntary
+arbitration — all of this can substantially reduce transaction
+costs within the community. The economy is always built on trust,
+and trust, in turn, requires institutions.
+
+The principal priority of such an organisation should be the
+development of business and the accumulation of productive capital.
+The community cannot judge its own success by the number of events,
+declarations, or political statements. The only truly objective
+criterion of stability remains the capacity to create enterprises,
+jobs, investment mechanisms, and economic infrastructure.
+
+The system must therefore consciously stimulate entrepreneurship
+and cooperation. Help in finding partners, joint investments,
+business incubation, support for startups, the bringing together of
+professional competencies, and the creation of jobs for Belarusians
+should be the central task of the organisation. Practical economic
+benefit unites people significantly more effectively than abstract
+ideological unity.
+
+Over time, such a network may begin to produce its own services as
+well. Some of these already look entirely realistic today: legal
+and accounting support, recruitment and educational projects,
+insurance and leasing mechanisms, medical services, investment
+structures, or proprietary fintech solutions. It is important to
+understand that this is not an attempt to artificially isolate
+Belarusians inside a separate system, but the creation of
+infrastructure that better accounts for the particularities and
+needs of the community.
+
+A new organisational architecture will also be required for the
+sustainable operation of such a model. It must simultaneously remain
+efficient enough for decision-making and transparent enough not to
+turn into yet another closed vertical structure. One possible
+solution might be a network of local *supolki* — small regional
+communities with elected coordinators and limited authority. The
+overall system could meanwhile employ modern digital instruments:
+electronic voting, transparent reporting, open budgets, and
+mechanisms of public oversight.
+
+The problem of internal conflicts deserves separate attention. Any
+long-term cooperation inevitably encounters disputes between
+individuals, business partners, or project participants. In the
+absence of trust, even small conflicts can destroy joint work and
+strengthen the atomisation of the community. This is why the system
+must contain a mechanism of voluntary mediation and arbitration. Its
+task would not be to perform state functions, but to help in
+resolving disputes and protecting the community's reputational
+environment. The highest sanction in such a model could remain
+exclusion from the network and loss of access to its possibilities.
+
+All of this cannot, of course, be built at once. But it is
+important to understand that the window of opportunity will not be
+open indefinitely. With each passing year the emigration is
+assimilating ever more, losing horizontal connections, and gradually
+breaking up into separate groups and individual trajectories. At the
+same time, global competition for resources, capital, and jobs is
+intensifying in a world rapidly changing under the influence of
+artificial intelligence and automation.
+
+The self-organisation of the Belarusian diaspora is therefore
+ceasing to be a question of cultural romanticism or political
+activism. It is gradually becoming a question of the community's
+long-term stability and of the Belarusians' capacity to preserve
+agency in a world where the importance of the individual human being
+as an economic unit will inevitably decline.
+
+## Risks, limits, and the problem of human nature
+
+Any attempt to build a long-term system sooner or later encounters
+one and the same problem: the principal weakness of institutions
+almost always turns out to be neither technology, nor economics, nor
+even external pressure, but human nature itself. A conversation
+about a new form of organising the diaspora would therefore be
+incomplete without an honest conversation about the risks and limits
+of such a model.
+
+First of all, it is important to acknowledge the obvious: ideal
+systems do not exist. Any human organisation eventually encounters
+conflicts of interest, struggles for influence, bureaucratisation,
+corruption, and the degradation of its original principles. The
+history of states, corporations, religious organisations, and
+political movements shows that practically any successful structure
+gradually begins to gravitate toward self-preservation and the
+concentration of power.
+
+This is why the chief task of such a project lies not in creating a
+utopia but in building mechanisms capable of restraining any
+system's natural tendency toward closure and the abuse of power.
+
+One of the principal risks will inevitably be the concentration of
+control over collective resources. The more successful the system
+becomes, the more strongly it will attract people interested not in
+the development of the community but in gaining control over its
+capital, infrastructure, and decision-making mechanisms. Any
+distributed network over time risks becoming either a closed club or
+a structure with "eternal leaders", gradually substituting the
+interests of the community with their own.
+
+The architecture of governance must therefore from the outset be
+built around the limitation of power. Election, transparent budgets,
+distributed governance, limited terms for functionaries, regular
+rotation, and public oversight should be not decorative elements of
+the system but its foundation.
+
+Even this is not enough, however. The principal defence against
+internal dictatorship in such a model remains the voluntariness of
+participation. A person must retain the possibility of leaving the
+system together with his assets and connections. Unlike a state,
+which holds a person through territory, taxes, and an administrative
+apparatus, such a network can exist only so long as its participants
+consider their participation beneficial and fair.
+
+Another serious threat is populism. Any system of collective capital
+inevitably encounters pressure toward immediate distribution of
+resources. Participants almost always want to receive more benefits
+today, even if this destroys the long-term stability of the model.
+History shows that consuming capital is significantly easier and
+psychologically more attractive than accumulating it.
+
+One of the most difficult tasks for *Veyshnoria Inc* should
+therefore be the preservation of long-term investment logic even
+under internal pressure. A system oriented exclusively toward quick
+consumption will inevitably lose to communities capable of thinking
+in generations.
+
+A separate conversation is needed about the problem that the
+Belarusian emigration has long described by the word *bulbosrach*.
+This is not simply about conflicts as such, but about a chronic
+inability to sustain cooperation for any length of time without
+internal schism. Struggles for symbolic leadership, ideological
+competition, moral categoricalness, and endless disputes about the
+"correctness" of views can destroy joint projects faster than any
+external pressure.
+
+Perhaps this is one of the principal causes of the weakness of
+post-Soviet societies in general. We are relatively bad at building
+stable horizontal institutions, since we too often perceive
+disagreement as a personal threat rather than as a normal part of
+joint work.
+
+For the long-term existence of such a system it is therefore
+critically important to adopt the principle that practical value
+matters more than ideological purity. The community must learn to
+assess a person above all by his capacity to create useful projects,
+jobs, capital, and infrastructure, rather than by the degree of his
+conformity to ever-shifting political or cultural expectations.
+
+There is also an opposite risk — the gradual transformation of the
+system into a closed parallel society. Any strong internal network
+eventually begins to create its own culture, mechanisms of trust,
+and system of interaction. Without proper balance this can lead to
+isolation, suspicion toward the outside world, and conflict with the
+society of the country of residence.
+
+This is why such a model must be built not on opposition to the
+states and societies within which Belarusians live, but on
+integration and mutual benefit. A strong and organised diaspora
+should be perceived not as a threat but as a source of economic
+activity, entrepreneurship, investment, and social stability.
+
+Financial risks are no less serious. Any system based on collective
+capital is vulnerable to crises, errors in management, declines in
+asset value, technological changes, or sanctions pressure. Particular
+caution will be needed with credit mechanisms and liquidity
+management. An overly aggressive financial policy can destroy trust
+in the system significantly faster than any ideological conflict.
+
+For all the threats enumerated, however, one must acknowledge
+another truth: refusing the attempt at self-organisation has its
+own cost. If the Belarusian diaspora continues to exist exclusively
+as a sum of separate individual trajectories, the most likely
+scenario will be gradual assimilation, the breakdown of horizontal
+connections, and the loss of collective agency. This is not a
+tragedy and not anyone's fault — it is how the history of most
+scattered communities unfolds.
+
+The principal risk therefore lies not only in the possibility of
+error in creating a new system, but in inaction. In a world where
+scale, capital, and the capacity for cooperation are coming to play
+an ever greater role, communities that do not create their own
+institutions gradually lose the ability to influence even their own
+future.
+
+## The next step: from idea to discussion
+
+It would be a mistake to take everything set out above as a ready
+plan of action or a completed model of the diaspora's future
+organisation. On the contrary, one of the main problems with such
+projects lies precisely in the temptation to begin too early to
+treat an abstract concept as an already finished system, while
+overlooking its limits, internal contradictions, and potential risks.
+
+A model of the kind sketched here as *Veyshnoria Inc* is in fact too
+complex and multifaceted to be properly designed by a single person
+or even a small group of like-minded people. It simultaneously
+touches economics, law, technology, corporate governance, the
+psychology of communities, questions of trust, identity, and the
+long-term distribution of power. Any error in the architecture of
+such a system can over time lead either to its disintegration or to
+its gradual transformation into yet another ineffective and closed
+structure.
+
+This essay should therefore not be taken as a ready programme of
+action. It is rather an attempt to articulate a direction of thought
+and to flag a problem that is likely to become only more urgent in
+the coming decades.
+
+We are entering an era in which stability is ever more determined
+not by territory but by the capacity for cooperation, the
+accumulation of capital, and the creation of effective institutions.
+If the Belarusian diaspora truly wants to preserve its agency over
+the long term, it will inevitably have to learn to build such
+institutions.
+
+The principal difficulty here, however, lies not even in money or
+technology. It is far harder to change the culture of interaction
+itself. The post-Soviet space has left us a legacy of habits of
+individual survival, distrust of horizontal structures, and the
+constant expectation that any collective initiative will sooner or
+later be either captured or destroyed by internal conflicts. The
+creation of sustainable cooperation therefore requires not only
+organisational decisions but also the gradual formation of a new
+culture of joint action.
+
+Perhaps the first and most realistic step today should be not the
+creation of a large structure as such, but the appearance of an
+environment for serious collective discussion of such ideas. A
+space in which entrepreneurs, specialists, investors, lawyers, IT
+developers, managers, and simply interested Belarusians could
+jointly analyse risks, argue, test mechanisms, and gradually search
+for viable forms of organisation.
+
+Such work will almost inevitably require the emergence of a small
+initiative group — something like "founding fathers" prepared to
+take responsibility for the first organisational steps. But here it
+is especially important to avoid the old mistake of many post-Soviet
+projects — turning leaders into an untouchable political or moral
+elite. Such a system needs not chieftains or heroes but people
+capable of building institutions slowly and methodically.
+
+It is no less important that such a project cannot be built around
+ideological uniformity. Belarusians are too varied in their views,
+experience, and conceptions of the future. Some associate themselves
+above all with European integration, some with national culture,
+some with entrepreneurship, and some are simply trying to secure a
+stable life for their family. An attempt to construct unity around
+the single "correct" system of views will almost inevitably lead to
+a new schism.
+
+This is perhaps why the principal unifying principle of such a
+system should be not ideological identity but practical cooperation.
+Not mandatory agreement on everything, but the capacity jointly to
+create value, capital, jobs, infrastructure, and a space of mutual
+trust.
+
+The Belarusian diaspora today is gradually approaching the point at
+which it will have to make a choice. Either to remain a sum of
+separate individual stories of emigration, gradually dissolving
+inside stronger and more organised systems. Or to attempt the
+transition to a new form of existence — a distributed network of
+people capable of jointly defending their interests, accumulating
+collective capital, and building institutions that work in the
+community's own interest.
+
+The task itself may well be too large for a single generation. Any
+long-term system begins at the moment when a sufficiently large
+number of people first seriously conclude that acting together is
+more sustainable than surviving alone.
+
+---
+
+::: {.essay-end}
+*Alexei Yerokhovets*<br>
+*August 2026*
+:::

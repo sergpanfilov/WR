@@ -1,0 +1,178 @@
+/*-- scss:defaults --*/
+
+// Dark mode palette — based on the logo book's dark stage.
+// Black is the editorial canvas; cream becomes the text colour.
+// The accent stays the same — it works on both backgrounds, by design.
+
+$body-bg:        #1A1A1A;
+$body-color:     #FEFDF8;
+$link-color:     #C8202A;
+$accent:         #C8202A;
+$rule-color:     #2D2D2D;
+$muted:          #777777;
+$muted-dark:     #999999;
+
+// === BOOTSTRAP NAVBAR — dark theme ===
+// On dark backgrounds Bootstrap reads $navbar-dark-* (not -light-*).
+// Both sets are set explicitly because Quarto's dark mode might use
+// either, depending on which base theme (darkly here) wires up.
+$navbar-dark-color:         #AAAAAA;
+$navbar-dark-hover-color:   #FEFDF8;
+$navbar-dark-active-color:  #FEFDF8;
+$navbar-light-color:        #AAAAAA;
+$navbar-light-hover-color:  #FEFDF8;
+$navbar-light-active-color: #FEFDF8;
+
+/*-- scss:rules --*/
+
+// Dark mode is mostly just the variable swap above (custom.scss uses those
+// variables for nearly everything). A handful of places need explicit
+// dark-mode overrides because they use hardcoded colours or because the
+// `lighten()` function in custom.scss produces the wrong direction on
+// dark backgrounds.
+
+body,
+html {
+  background: #1A1A1A;
+  color: #FEFDF8;
+}
+
+// Navbar — same cream-on-cream concept inverts cleanly to dark-on-dark.
+.navbar {
+  background: #1A1A1A !important;
+  border-bottom-color: #2D2D2D !important;
+
+  // Invert the black-on-cream logo to white-on-dark.
+  // The byline dots are red and pass through invert as cyan-ish, so we
+  // also apply hue-rotate to neutralise them back to red. Net effect:
+  // black ink → white, red dots → red.
+  .navbar-brand img.navbar-logo {
+    filter: invert(1) hue-rotate(180deg);
+  }
+
+  .navbar-nav .nav-link {
+    color: #777777 !important;
+
+    &:hover,
+    &.active {
+      color: #FEFDF8 !important;
+    }
+  }
+
+  // Color scheme toggle icon — override the background-image with a
+  // light fill so the icon is visible against the dark navbar. Same
+  // four-state matrix as in custom.scss, but with light colours.
+  .quarto-color-scheme-toggle {
+    .bi::before {
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AAAAAA" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>') !important;
+    }
+
+    &:hover .bi::before {
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FEFDF8" class="bi bi-toggle-off" viewBox="0 0 16 16"><path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/></svg>') !important;
+    }
+
+    &.alternate .bi::before {
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23AAAAAA" class="bi bi-toggle-on" viewBox="0 0 16 16"><path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>') !important;
+    }
+
+    &.alternate:hover .bi::before {
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%23FEFDF8" class="bi bi-toggle-on" viewBox="0 0 16 16"><path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>') !important;
+    }
+  }
+}
+
+// Body text — lighten() in custom.scss makes things lighter, which is wrong
+// for muted text on dark. Override the deck/subtitle/intro colours.
+
+.essay-deck,
+.deck,
+.intro,
+.subtitle,
+.listing-subtitle {
+  color: #BBBBBB !important;
+}
+
+article p,
+.dropcap-paragraph,
+article {
+  color: #FEFDF8;
+}
+
+// Drop cap — Exo 2 Thin in cream
+article .dropcap-paragraph::first-letter,
+article > p:first-of-type::first-letter {
+  color: #FEFDF8;
+}
+
+// Headings stay bright
+.essay-title,
+article h2,
+article h3,
+.quarto-title h1.title {
+  color: #FEFDF8;
+}
+
+// Listing items
+.quarto-listing-default .list .listing-item {
+  border-bottom-color: #2D2D2D;
+
+  .listing-title a {
+    color: #FEFDF8;
+
+    &:hover {
+      color: #C8202A;
+    }
+  }
+}
+
+// Block quotes — keep red rule, soften text
+blockquote {
+  color: #CCCCCC;
+}
+
+// Footnotes
+.footnotes {
+  border-top-color: #2D2D2D;
+  color: #BBBBBB;
+}
+
+// Footer
+.page-footer,
+.nav-footer {
+  background: #1A1A1A !important;
+  border-top-color: #2D2D2D;
+  color: #777777;
+
+  a:hover {
+    color: #FEFDF8;
+  }
+}
+
+// Horizontal rules
+hr {
+  border-top-color: #2D2D2D;
+}
+
+.essay-title-block-rule {
+  border-top-color: #2D2D2D;
+}
+
+// Callouts
+.callout {
+  background: rgba(#C8202A, 0.08);
+}
+
+// Kicker stays red (accent works on both modes)
+.kicker {
+  color: #C8202A;
+}
+
+// Byline strong (author name) in cream
+.byline strong {
+  color: #FEFDF8;
+}
+
+// Essay-end
+.essay-end {
+  color: #777777;
+}

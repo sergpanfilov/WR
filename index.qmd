@@ -1,0 +1,17 @@
+---
+title: "White Ribbon"
+description: "Essays on state craft and citizenship"
+format:
+  html:
+    page-layout: full
+    include-in-header:
+      text: |
+        <meta http-equiv="refresh" content="0; url=/en/">
+        <link rel="canonical" href="https://white-ribbon.net/en/">
+---
+
+::: {.language-gate}
+# White Ribbon
+
+[English](/en/) · [Русский](/ru/) · [Беларуская](/be/)
+:::

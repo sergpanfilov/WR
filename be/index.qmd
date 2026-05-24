@@ -1,0 +1,28 @@
+---
+title: "Белая стужка"
+subtitle: "Эсэ пра дзяржаўны лад і грамадзянства"
+lang: be
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, subtitle, reading-time]
+  date-format: "D MMMM YYYY"
+  feed: true
+page-layout: article
+title-block-banner: false
+---
+
+::: {.intro}
+*Белая стужка* публікуе доўгія эсэ пра дэмакратычныя інстытуты, змены
+рэжымаў і практыку грамадзянства пад ціскам. Наша рэдакцыйная традыцыя —
+праца Левіцкі і Зіблата; наша задача — чытаць сучаснасць.
+:::
+
+::: {.callout-note}
+Раздзел у падрыхтоўцы. Першыя публікацыі з'явяцца разам з перакладамі
+ўжо апублікаваных ангельскіх эсэ.
+:::

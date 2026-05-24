@@ -1,0 +1,28 @@
+---
+title: "Белая лента"
+subtitle: "Эссе о государственном устройстве и гражданстве"
+lang: ru
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  fields: [date, title, subtitle, reading-time]
+  date-format: "D MMMM YYYY"
+  feed: true
+page-layout: article
+title-block-banner: false
+---
+
+::: {.intro}
+*Белая лента* публикует длинные эссе о демократических институтах,
+смене режимов и практике гражданства под давлением. Наша редакционная
+традиция — работа Левицки и Зиблатта; наша задача — читать настоящее.
+:::
+
+::: {.callout-note}
+Раздел в подготовке. Первые публикации появятся вместе с переводами уже
+опубликованных английских эссе.
+:::

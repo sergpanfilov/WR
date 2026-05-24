@@ -1,0 +1,73 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - "CNAME"
+    - "assets/**"
+
+website:
+  title: "White Ribbon"
+  description: "Essays on state craft and citizenship"
+  site-url: "https://white-ribbon.net"
+  favicon: "assets/Logo_WR_dark.svg"
+  page-navigation: false
+  search:
+    location: navbar
+    type: overlay
+    keyboard-shortcut: ["/", "?", "k"]
+    limit: 20
+    copy-button: false
+    show-item-context: true
+  navbar:
+    background: "#FEFDF8"
+    foreground: "#1A1A1A"
+    logo: "assets/Logo_WR_light.svg"
+    logo-alt: "White Ribbon"
+    logo-href: "/"
+    right:
+      - text: "EN"
+        href: en/index.qmd
+      - text: "RU"
+        href: ru/index.qmd
+      - text: "BE"
+        href: be/index.qmd
+      - text: "About"
+        href: about.qmd
+  page-footer:
+    background: "#FEFDF8"
+    border: false
+    left: |
+      <span class="footer-mark">White Ribbon · An Independent Editorial Project</span>
+    right: |
+      <span class="footer-meta">© 2026 · ISSN pending</span>
+
+format:
+  html:
+    theme:
+      light:
+        - default
+        - styles/custom.scss
+      dark:
+        - darkly
+        - styles/custom.scss
+        - styles/dark.scss
+    toc: false
+    page-layout: article
+    fontsize: 1.125rem
+    linkcolor: "#C8202A"
+    code-copy: false
+    anchor-sections: true
+    smooth-scroll: true
+    title-block-style: none
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300&family=JetBrains+Mono:wght@400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@1,8..60,400&display=swap" rel="stylesheet">
+
+execute:
+  freeze: auto
+
+bibliography: references.bib
+csl: csl/chicago-author-date.csl

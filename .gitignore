@@ -1,0 +1,25 @@
+# Quarto build output
+_site/
+_freeze/
+.quarto/
+
+# macOS / Windows / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# Drafts (uncomment to keep drafts out of git)
+# drafts/
+
+# Node / Python (if anything sneaks in)
+node_modules/
+__pycache__/
+*.pyc
+
+# Environment
+.env
+.env.local
+
+/.quarto/
+**/*.quarto_ipynb
