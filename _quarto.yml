@@ -32,7 +32,7 @@ website:
       - text: "BE"
         href: be/index.qmd
       - text: "About"
-        href: about.qmd
+        href: ru/about.qmd
   page-footer:
     background: "#FEFDF8"
     border: false
@@ -68,7 +68,7 @@ format:
     include-after-body:
       text: |
         <script src="/assets/lang-switch.js"></script>
-        
+
 execute:
   freeze: auto
 
