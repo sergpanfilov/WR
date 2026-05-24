@@ -277,10 +277,34 @@ body {
 
     .navbar-brand-container,
     .navbar-brand {
+      // Hide the big horizontal logo on mobile entirely; replace with
+      // a compact mark (W|R) shown as a background-image on the parent.
       img.navbar-logo {
-        max-height: 44px;
+        display: none !important;
+      }
+
+      // Show the compact mark via ::before. Light theme picks the
+      // light-mode SVG; dark theme overrides below.
+      &::before {
+        content: "";
+        display: block;
+        width: 64px;
+        height: 44px;
+        background-image: url('/assets/Logo_WR_mark_light.svg');
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: contain;
       }
     }
+  }
+
+  // In dark mode, swap the mark to its dark-theme variant.
+  body.quarto-dark #quarto-header > nav.navbar .navbar-brand-container::before,
+  body.quarto-dark #quarto-header > nav.navbar .navbar-brand::before {
+    background-image: url('/assets/Logo_WR_mark_dark.svg');
+  }
+
+  #quarto-header > nav.navbar {
 
     // Hamburger button: tone down from the giant default Bootstrap
     // toggler to a thin minimal icon matching our overall weight.
