@@ -909,15 +909,21 @@ footer.footer,
 }
 
 @media (max-width: 640px) {
-  footer.footer,
-  .footer {
-    padding: 1.5rem 1.25rem;
+  .nav-footer,
+  footer.footer {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    gap: 0.5rem;
+    padding: 1.5rem 20px !important;
+    
+    .nav-footer-left,
+    .nav-footer-right,
+    .nav-footer-center {
+      text-align: left !important;
+      width: 100%;
+    }
   }
-}
-
-.footer-mark,
-.footer-meta {
-  font-family: $font-family-monospace;
 }
 
 // === CALLOUTS (used on placeholder pages) ===
