@@ -1125,25 +1125,10 @@ div.callout-note .callout-body {
   padding-left: 0 !important;
 }
 
-.quarto-listing .quarto-post .metadata {
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  div.quarto-listing .quarto-post .metadata,
+  .quarto-listing div.quarto-post .metadata {
     flex-direction: column !important;
     align-items: flex-start !important;
-    
-    .listing-reading-time::before {
-      display: none !important;
-    }
-    
-    .listing-date::before,
-    .listing-reading-time::before {
-      content: "" !important;
-      display: inline-block !important;
-      width: 3px;
-      height: 3px;
-      background: $accent;
-      border-radius: 50%;
-      vertical-align: middle;
-      margin: 0 0.6rem 0 0 !important;
-    }
   }
 }
