@@ -974,12 +974,12 @@ footer.footer,
   // separator between them. On mobile, stack them: each on its own line
   // with a red dot at the start.
   .quarto-post .metadata {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0.25rem;
+    flex-direction: row !important;
+    align-items: baseline !important;
+    flex-wrap: nowrap !important;
+    gap: 0;
 
-    // Add a leading red dot before each metadata item
-    .listing-date::before,
+    // Single dot between date and reading-time, like desktop
     .listing-reading-time::before {
       content: "" !important;
       display: inline-block !important;
@@ -988,7 +988,7 @@ footer.footer,
       background: $accent;
       border-radius: 50%;
       vertical-align: middle;
-      margin: 0 0.6rem 0 0 !important;
+      margin: 0 0.6rem !important;
     }
   }
 
