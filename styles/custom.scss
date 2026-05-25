@@ -1039,3 +1039,11 @@ div.callout-note > .callout-header {
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
+
+div.callout-note > .callout-header {
+  padding-left: 0 !important;
+}
+
+div.callout-note .callout-title-container {
+  padding-left: 0 !important;
+}
