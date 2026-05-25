@@ -1048,24 +1048,25 @@ div.callout-note > .callout-header {
 div.callout-note .callout-title-container {
   padding-left: 0 !important;
 }
-// Таблицы — компактный стиль
+
+// Таблицы — White Ribbon style
 .quarto-figure table,
 table.table,
 .cell-output-display table {
-  font-size: 0.9em;
-  width: auto !important;
+  font-size: 0.95em;
+  width: 100% !important;
   margin-left: 0 !important;
-  margin-right: auto !important;
+  margin-right: 0 !important;
   border-collapse: collapse;
 }
 
-// Заголовки столбцов — влево, моноширинно
+// Заголовки столбцов — влево, моноширинно, мельче
 .quarto-figure table thead th,
 table.table thead th,
 .cell-output-display table thead th {
   text-align: left !important;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.85em;
+  font-size: 0.7em;
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1074,13 +1075,19 @@ table.table thead th,
   padding: 0.5em 1.5em 0.5em 0;
 }
 
-// Ячейки — компактнее
+// Ячейки
 .quarto-figure table tbody td,
 table.table tbody td,
 .cell-output-display table tbody td {
   padding: 0.4em 1.5em 0.4em 0;
   border-top: none;
   border-bottom: 1px solid #e0ddd5;
+}
+
+// Числовые столбцы — вправо
+.quarto-figure table tbody td:not(:first-child),
+table.table tbody td:not(:first-child) {
+  text-align: right !important;
 }
 
 // Подпись таблицы — влево, мелким моноширинным
@@ -1090,7 +1097,7 @@ caption,
   text-align: left !important;
   caption-side: top;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.75em;
+  font-size: 0.65em;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #888;
