@@ -1018,7 +1018,11 @@ div.callout-note.callout-style-default > .callout-header {
 }
 
 div.callout-note .callout-icon::before {
-  background-image: none !important;
+  display: none !important;
+}
+
+div.callout-note .callout-icon-container {
+  display: none !important;
 }
 
 div.callout-note {
@@ -1038,9 +1042,6 @@ div.callout-note > .callout-header {
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-}
-
-div.callout-note > .callout-header {
   padding-left: 0 !important;
 }
 
