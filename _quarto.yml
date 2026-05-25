@@ -37,7 +37,7 @@ website:
     background: "#FEFDF8"
     border: false
     left: |
-      <span class="footer-mark">White Ribbon · An Independent Editorial Project</span>
+      <span class="footer-mark">White Ribbon · An Independent Project</span>
     right: |
       <span class="footer-meta">© 2026 · ISSN pending</span>
 
