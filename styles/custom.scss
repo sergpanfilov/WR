@@ -1124,3 +1124,15 @@ div.callout-note .callout-body-container,
 div.callout-note .callout-body {
   padding-left: 0 !important;
 }
+
+// Буквица в первом абзаце статьи
+.quarto-title-block + * p:first-of-type::first-letter,
+#title-block-header + * p:first-of-type::first-letter {
+  float: left;
+  font-family: 'Source Serif 4', serif;
+  font-size: 4.5em;
+  line-height: 0.85;
+  font-weight: 700;
+  margin: 0.05em 0.1em 0 0;
+  color: #1a1a1a;
+}
