@@ -1090,6 +1090,16 @@ table.table tbody td:not(:first-child) {
   text-align: right !important;
 }
 
+// Первый столбец и его заголовок — влево
+.quarto-figure table thead th:first-child,
+table.table thead th:first-child,
+.cell-output-display table thead th:first-child,
+.quarto-figure table tbody td:first-child,
+table.table tbody td:first-child,
+.cell-output-display table tbody td:first-child {
+  text-align: left !important;
+}
+
 // Подпись таблицы — влево, мелким моноширинным
 caption,
 .quarto-figure figcaption,
