@@ -1,5 +1,6 @@
 ---
-title: "Missing Middle: Belarusian Entrepreneurs in the Western Support System"
+title: "Missing Middle"
+subtitle: "Belarusian Entrepreneurs in the Western Support System"
 description: "Between sanctions policy and humanitarian support, there is a structurally absent layer that mature democracies consider the backbone of economic sovereignty. Some half a million Belarusian self-employed and micro-entrepreneurs of the real sector have no addressable category in any existing donor taxonomy."
 author: "Sergey Panfilov"
 date: "2026-05-25"
