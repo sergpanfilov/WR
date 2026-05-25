@@ -10,7 +10,7 @@ listing:
   sort-ui: false
   filter-ui: false
   fields: [date, title, subtitle, reading-time]
-  date-format: "D MMMM YYYY"
+  date-format: "D MM YY"
   feed: true
 page-layout: article
 title-block-banner: false
