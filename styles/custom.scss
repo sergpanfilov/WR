@@ -1023,12 +1023,13 @@ div.callout-note .callout-icon::before {
 
 div.callout-note {
   background-color: transparent !important;
-  border-left-width: 3px !important;
+  border-left: 3px solid #C8202A !important;
   border-top: none !important;
   border-right: none !important;
   border-bottom: none !important;
   border-radius: 0 !important;
-  padding-left: 1.5em;
+  margin-left: -1.5em !important;
+  padding-left: 1.5em !important;
 }
 
 div.callout-note > .callout-header {
