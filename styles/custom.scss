@@ -1048,3 +1048,52 @@ div.callout-note > .callout-header {
 div.callout-note .callout-title-container {
   padding-left: 0 !important;
 }
+// Таблицы — компактный стиль
+.quarto-figure table,
+table.table,
+.cell-output-display table {
+  font-size: 0.9em;
+  width: auto !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  border-collapse: collapse;
+}
+
+// Заголовки столбцов — влево, моноширинно
+.quarto-figure table thead th,
+table.table thead th,
+.cell-output-display table thead th {
+  text-align: left !important;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #555;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 0.5em 1.5em 0.5em 0;
+}
+
+// Ячейки — компактнее
+.quarto-figure table tbody td,
+table.table tbody td,
+.cell-output-display table tbody td {
+  padding: 0.4em 1.5em 0.4em 0;
+  border-top: none;
+  border-bottom: 1px solid #e0ddd5;
+}
+
+// Подпись таблицы — влево, мелким моноширинным
+caption,
+.quarto-figure figcaption,
+.table-caption {
+  text-align: left !important;
+  caption-side: top;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #888;
+  padding-bottom: 0.8em;
+  margin-left: 0;
+}
