@@ -1007,3 +1007,34 @@ footer.footer,
     }
   }
 }
+// Callouts — White Ribbon style
+div.callout-note.callout {
+  border-left-color: #C8202A !important;
+}
+
+div.callout-note.callout-style-default > .callout-header {
+  background-color: transparent !important;
+  border-bottom: 1px solid #e0ddd5;
+}
+
+div.callout-note .callout-icon::before {
+  background-image: none !important;
+}
+
+div.callout-note {
+  background-color: transparent !important;
+  border-left-width: 3px !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  border-radius: 0 !important;
+  padding-left: 1.5em;
+}
+
+div.callout-note > .callout-header {
+  color: #1a1a1a;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
