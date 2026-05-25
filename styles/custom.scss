@@ -1119,3 +1119,8 @@ caption,
 .header-section-number {
   display: none !important;
 }
+
+div.callout-note .callout-body-container,
+div.callout-note .callout-body {
+  padding-left: 0 !important;
+}
