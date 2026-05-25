@@ -1114,3 +1114,42 @@ caption,
   padding-bottom: 0.8em;
   margin-left: 0;
 }
+// Кастомная нумерация заголовков
+body {
+  counter-reset: h2-counter;
+}
+
+h2.anchored:not(.unnumbered) {
+  counter-reset: h3-counter;
+}
+
+// Прячем встроенный номер от Quarto
+.header-section-number {
+  display: none !important;
+}
+
+// Свой счётчик для H2
+h2.anchored:not(.unnumbered)::before {
+  counter-increment: h2-counter;
+  content: counter(h2-counter) " · ";
+  color: #C8202A;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
+  vertical-align: 0.25em;
+  margin-right: 0.3em;
+}
+
+// Свой счётчик для H3
+h3.anchored:not(.unnumbered)::before {
+  counter-increment: h3-counter;
+  content: counter(h2-counter) "." counter(h3-counter) " · ";
+  color: #C8202A;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  font-size: 0.7em;
+  letter-spacing: 0.1em;
+  vertical-align: 0.25em;
+  margin-right: 0.3em;
+}
