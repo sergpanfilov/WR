@@ -1,33 +1,114 @@
 ---
-title: "О проекте"
+title: ""
 lang: ru
+page-layout: article
+title-block-style: none
 ---
 
-## Что это
+```{=html}
+<div class="about-page">
 
-*Белая лента* — независимый редакционный проект о тихих механизмах
-демократической эрозии и столь же тихих механизмах её предотвращения.
-Мы публикуем длинные эссе в традиции *How Democracies Die* Стивена
-Левицки и Дэниела Зиблатта — традиции, которая рассматривает авторитаризм
-не как внезапный переворот, а как медленное размывание норм, накопление
-маленьких уступок.
+  <section class="about-section">
+    <p class="about-kicker">Что мы строим</p>
+    <h1 class="about-title">Четыре вида активов</h1>
+    <p class="about-intro">Сильное сообщество начинается не с деклараций. Оно начинается с полезных для его участников механизмов.</p>
+    <div class="assets-grid">
+      <div class="asset-tile">
+        <p class="tile-num">01</p>
+        <p class="tile-title">Капитал</p>
+        <p class="tile-body">Сообщество, не обладающее собственным капиталом, неизбежно остаётся зависимым от внешних обстоятельств.</p>
+      </div>
+      <div class="asset-tile">
+        <p class="tile-num">02</p>
+        <p class="tile-title">Сервисы</p>
+        <p class="tile-body">Юридическая помощь, поиск работы, образование, медицина — всё это может создаваться внутри и работать в интересах участников.</p>
+      </div>
+      <div class="asset-tile">
+        <p class="tile-num">03</p>
+        <p class="tile-title">Институты</p>
+        <p class="tile-body">Репутационные системы, внутренний арбитраж, механизмы управления и контроля.</p>
+      </div>
+      <div class="asset-tile">
+        <p class="tile-num">04</p>
+        <p class="tile-title">Доверие</p>
+        <p class="tile-body">Самый ценный и одновременно самый дефицитный ресурс современной эмиграции.</p>
+      </div>
+    </div>
+  </section>
 
-## Откуда название
+  <section class="about-section">
+    <p class="about-label">Какие проблемы мы решаем</p>
+    <div class="problems-grid">
+      <div class="problem-tile">
+        <p class="tile-title">Работа и карьера</p>
+        <p class="tile-body">Верифицированная платформа для поиска работы, сотрудников, партнёров и инвесторов.</p>
+      </div>
+      <div class="problem-tile">
+        <p class="tile-title">Жильё</p>
+        <p class="tile-body">Кооперативный банк, собственные ипотечные программы, девелоперская компания.</p>
+      </div>
+      <div class="problem-tile">
+        <p class="tile-title">Медицина</p>
+        <p class="tile-body">Медцентр с закрытой системой записи — более быстрый доступ к услугам по страховке.</p>
+      </div>
+      <div class="problem-tile">
+        <p class="tile-title">Банковские услуги</p>
+        <p class="tile-body">Оценка клиентов по финансовому состоянию и репутации, а не по паспорту.</p>
+      </div>
+      <div class="problem-tile">
+        <p class="tile-title">Правовая защита</p>
+        <p class="tile-body">Консультации, суды, коллективная защита от дискриминации. Один не судится — сообщество судится.</p>
+      </div>
+    </div>
+  </section>
 
-Белая лента была знаком, который белорусы носили в 2020 году. Режимы могут
-запретить флаг, запретить цветовой код, запретить лозунг. Они не могут
-запретить белый цвет.
+  <section class="about-section">
+    <p class="about-label">Дорожная карта</p>
+    <div class="roadmap">
+      <div class="roadmap-item active">
+        <span class="rm-num">Этап 0</span>
+        <div class="rm-content">
+          <p class="rm-title">Формирование инициативной группы — сейчас</p>
+          <p class="rm-body">Собрать ядро единомышленников. Проверить совместимость взглядов. Выявить сильные и слабые стороны концепции.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="rm-num">Этап 1</span>
+        <div class="rm-content">
+          <p class="rm-title">Проектирование системы</p>
+          <p class="rm-body">Юридическая форма, механизмы управления, финансовая модель, техническая инфраструктура.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="rm-num">Этап 2</span>
+        <div class="rm-content">
+          <p class="rm-title">Базовые сервисы</p>
+          <p class="rm-body">Поиск работы, юридическая помощь, профессиональные контакты, медиация.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="rm-num">Этап 3</span>
+        <div class="rm-content">
+          <p class="rm-title">Экономическая инфраструктура</p>
+          <p class="rm-body">Инвестфонд, лизинг, рекрутинг, образовательные платформы.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="rm-num">Этап 4</span>
+        <div class="rm-content">
+          <p class="rm-title">Собственные институты</p>
+          <p class="rm-body">Кооперативный банк, медцентр, страхование, девелопмент.</p>
+        </div>
+      </div>
+      <div class="roadmap-item">
+        <span class="rm-num">Этап 5</span>
+        <div class="rm-content">
+          <p class="rm-title">Зрелая система</p>
+          <p class="rm-body">Устойчивая сеть, способная развиваться независимо от своих создателей.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-## Что мы публикуем
-
-Эссе. Длинные — обычно от 3 000 до 6 000 слов. С примечаниями, ссылками,
-в стиле Chicago Author-Date. Каждое эссе доступно на трёх языках:
-английском, русском, белорусском. Английская версия — каноническая.
-
-Мы не публикуем новости, горячие комментарии, институциональные пресс-релизы.
-Мы не принимаем рекламу. У нас нет редколлегии, нет спонсоров и нет
-политической принадлежности — только читатели.
-
-## Контакты
-
-Переписка: editors at white-ribbon.net.
+</div>
+```

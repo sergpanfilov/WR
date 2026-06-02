@@ -1140,6 +1140,9 @@ div.callout-note .callout-body {
 }
 // === HOME PAGE ===
 
+// #quarto-content has inline style min-height: calc(-278px + 100vh)
+// which CSS cannot override. Instead we make .vi-home fill that space
+// so content occupies the viewport and footer sits at the bottom.
 #quarto-content.page-layout-custom > .vi-home {
   padding-top: 0 !important;
 }
@@ -1152,8 +1155,11 @@ div.callout-note .callout-body {
 }
 
 .vi-home {
-  display: block;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  align-items: start;
   width: 100%;
+  min-height: calc(100vh - 140px - 94px); // viewport - navbar - footer
 }
 
 .vi-hero {
@@ -1233,11 +1239,216 @@ div.callout-note .callout-body {
   }
 }
 
-.vi-stages { display: none; }
+// Right column: padding mirrors navbar (5rem right, 48px top)
+.vi-stages {
+  padding: 48px 5rem 48px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.vi-stage {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 0.5px solid $rule-color;
+
+  &:first-child { border-top: 0.5px solid $rule-color; }
+}
+
+.vi-stage-num {
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: $muted;
+  min-width: 44px;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+
+.vi-stage-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.vi-stage-title {
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.05em;
+  color: $muted;
+  line-height: 1.4;
+}
+
+.vi-stage-desc {
+  font-family: $font-family-monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.03em;
+  color: $muted;
+  line-height: 1.5;
+  display: none;
+}
+
+.vi-stage.active .vi-stage-num { color: $accent; }
+.vi-stage.active .vi-stage-title { color: $body-color; }
+.vi-stage.active .vi-stage-desc { display: block; }
 
 @media (max-width: 768px) {
+  .vi-home {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .vi-stages { display: none; }
+
   .vi-hero {
     padding: 2.5rem 1.25rem;
     max-width: none;
   }
+}
+
+// === ABOUT PAGE ===
+
+.about-page {
+  padding: 48px 0;
+}
+
+.about-section {
+  margin-bottom: 52px;
+}
+
+.about-kicker {
+  font-family: $font-family-monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $accent;
+  margin: 0 0 0.6rem;
+}
+
+.about-title {
+  font-family: $font-family-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $body-color;
+  margin: 0 0 0.6rem;
+}
+
+.about-intro {
+  font-family: $font-family-serif;
+  font-size: 0.85rem;
+  color: $muted;
+  line-height: 1.65;
+  margin: 0 0 1.5rem;
+}
+
+.about-label {
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $muted;
+  margin: 0 0 1rem;
+}
+
+// Assets grid 2×2
+.assets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.asset-tile {
+  background: lighten($body-bg, 0%);
+  border: 0.5px solid $rule-color;
+  padding: 16px 18px;
+}
+
+// Problems grid 3+2
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.problem-tile {
+  border: 0.5px solid $rule-color;
+  padding: 14px 16px;
+
+  &:nth-child(4),
+  &:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+.tile-num {
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: $accent;
+  margin: 0 0 0.5rem;
+}
+
+.tile-title {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $body-color;
+  margin: 0 0 0.4rem;
+}
+
+.tile-body {
+  font-family: $font-family-sans-serif;
+  font-size: 0.7rem;
+  color: $muted;
+  line-height: 1.55;
+  margin: 0;
+}
+
+// Roadmap
+.roadmap {
+  border-top: 0.5px solid $rule-color;
+}
+
+.roadmap-item {
+  display: flex;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 0.5px solid $rule-color;
+
+  &.active {
+    background: darken($body-bg, 2%);
+    margin: 0 -1rem;
+    padding: 14px 1rem;
+  }
+}
+
+.rm-num {
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: $muted;
+  min-width: 52px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.roadmap-item.active .rm-num {
+  color: $accent;
+}
+
+.rm-title {
+  font-family: $font-family-sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: $body-color;
+  margin: 0 0 3px;
+}
+
+.rm-body {
+  font-family: $font-family-sans-serif;
+  font-size: 0.7rem;
+  color: $muted;
+  line-height: 1.55;
+  margin: 0;
 }
