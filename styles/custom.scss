@@ -875,7 +875,7 @@ footer.footer,
 .footer {
   background: $body-bg !important;
   border-top: 1px solid $rule-color;
-  padding: 2.5rem 5rem;          // 80px horizontal, matches navbar
+  padding: 2.5rem 2.5rem;          // 80px horizontal, matches navbar
   font-family: $font-family-monospace;
   font-size: 0.7rem;
   letter-spacing: 0.2em;
@@ -1156,7 +1156,7 @@ div.callout-note .callout-body {
 
 .vi-home {
   display: grid;
-  grid-template-columns: 1fr 380px;
+  grid-template-columns: 1fr 634px;
   align-items: start;
   width: 100%;
   min-height: calc(100vh - 140px - 94px); // viewport - navbar - footer
@@ -1286,12 +1286,12 @@ div.callout-note .callout-body {
   letter-spacing: 0.03em;
   color: $muted;
   line-height: 1.5;
-  opacity: 0.6;
+  display: none;
 }
 
 .vi-stage.active .vi-stage-num { color: $accent; }
 .vi-stage.active .vi-stage-title { color: $body-color; }
-.vi-stage.active .vi-stage-desc { opacity: 1; }
+.vi-stage.active .vi-stage-desc { display: block; }
 
 @media (max-width: 768px) {
   .vi-home {
