@@ -37,7 +37,7 @@ title-block-style: none
   </section>
 
   <section class="about-section">
-    <p class="about-label">Какие проблемы мы решаем</p>
+    <p class="about-label" style="margin-top:2.5rem">Какие проблемы мы решаем</p>
     <div class="problems-grid">
       <div class="problem-tile">
         <p class="tile-title">Работа и карьера</p>
@@ -63,7 +63,7 @@ title-block-style: none
   </section>
 
   <section class="about-section">
-    <p class="about-label">Дорожная карта</p>
+    <p class="about-label" style="margin-top:2.5rem">Дорожная карта</p>
     <div class="roadmap">
       <div class="roadmap-item active">
         <span class="rm-num">Этап 0</span>
