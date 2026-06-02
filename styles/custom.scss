@@ -158,16 +158,16 @@ body {
   // far right. Menu items follow the toggle with their normal padding.
 
   .navbar-container {
-    justify-content: space-between !important;
+    justify-content: flex-start !important;
     align-items: center !important;
     flex-wrap: nowrap !important;
 
     .navbar-brand-container,
-    .navbar-brand-container.mx-auto { order: 1; margin-left: 0 !important; }
-    .navbar-collapse                { order: 2; }
-    .quarto-navbar-tools            { order: 3; }
+    .navbar-brand-container.mx-auto { order: 1; }
     .type-overlay,
-    .quarto-search                  { order: 4; margin-left: 0 !important; }
+    .quarto-search                  { order: 2; margin-left: auto !important; }
+    .quarto-navbar-tools            { order: 3; }
+    .navbar-collapse                { order: 4; }
   }
 
   // === SEARCH BUTTON ===
