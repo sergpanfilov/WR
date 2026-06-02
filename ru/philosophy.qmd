@@ -5,6 +5,149 @@ page-layout: article
 title-block-style: none
 ---
 
-::: {.callout-note}
-Раздел в разработке
-:::
+```{=html}
+<div class="philosophy-page">
+
+  <section class="ph-section">
+    <p class="ph-kicker">Наши принципы</p>
+    <h1 class="ph-title">Устойчивость системы определяется не благими намерениями, а принципами</h1>
+    <p class="ph-intro">Список не завершён. Он будет развиваться по мере роста организации. Но именно эти принципы лежат в основе проекта сегодня.</p>
+
+    <div class="accordion" id="acc">
+
+      <div class="acc-item">
+        <div class="acc-header" onclick="toggleAcc(this)">
+          <span class="acc-num">01</span>
+          <span class="acc-title">Добровольность</span>
+          <span class="acc-icon">+</span>
+        </div>
+        <div class="acc-body open">Функционеры системы не получают заработную плату за свою общественную деятельность. Человек, претендующий на влияние внутри организации, должен делать это не ради личного дохода. Мы считаем, что это один из важнейших механизмов защиты от карьеристов, популистов и людей, рассматривающих организацию как инструмент личного обогащения.</div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-header" onclick="toggleAcc(this)">
+          <span class="acc-num">02</span>
+          <span class="acc-title">Законность</span>
+          <span class="acc-icon">+</span>
+        </div>
+        <div class="acc-body">Мы действуем исключительно в рамках законодательства стран, в которых живут наши участники. Любые проекты, сервисы и инициативы должны быть законными, прозрачными и способными выдержать любую внешнюю проверку.</div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-header" onclick="toggleAcc(this)">
+          <span class="acc-num">03</span>
+          <span class="acc-title">Открытость и прозрачность</span>
+          <span class="acc-icon">+</span>
+        </div>
+        <div class="acc-body">Закрытость — главный источник коррупции и злоупотреблений. Любое решение, связанное с финансами, управлением и распределением ресурсов, должно быть доступно для изучения участниками. Если решение нельзя объяснить — его не следует принимать.</div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-header" onclick="toggleAcc(this)">
+          <span class="acc-num">04</span>
+          <span class="acc-title">Приоритет бизнеса</span>
+          <span class="acc-icon">+</span>
+        </div>
+        <div class="acc-body">Главная цель — не обсуждение проблем, а создание возможностей. Каждое новое предприятие, каждое новое рабочее место усиливают всю организацию. Мы хотим создавать среду, в которой беларусам проще находить партнёров, запускать компании и профессионально развиваться.</div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-header" onclick="toggleAcc(this)">
+          <span class="acc-num">05</span>
+          <span class="acc-title">Накопление капитала</span>
+          <span class="acc-icon">+</span>
+        </div>
+        <div class="acc-body">Капитал — не символ богатства, а инструмент создания новых возможностей. Рост личного благосостояния участников и рост коллективного капитала не противоречат друг другу. Напротив, они должны усиливать друг друга.</div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-header" onclick="toggleAcc(this)">
+          <span class="acc-num">06</span>
+          <span class="acc-title">Zero trust</span>
+          <span class="acc-icon">+</span>
+        </div>
+        <div class="acc-body">Мы не доверяем власти. Мы не доверяем руководителям. Именно поэтому система должна быть построена так, чтобы не требовать доверия. Любой человек, получающий возможность распоряжаться ресурсами, должен быть готов объяснить и обосновать каждое своё решение.</div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-header" onclick="toggleAcc(this)">
+          <span class="acc-num">07</span>
+          <span class="acc-title">Практическая польза важнее идеологии</span>
+          <span class="acc-icon">+</span>
+        </div>
+        <div class="acc-body">Беларусы могут иметь разные политические взгляды, религиозные убеждения и представления о будущем. Мы не считаем единомыслие обязательным условием сотрудничества. Практическая кооперация должна объединять нас сильнее, чем идеологические различия.</div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-header" onclick="toggleAcc(this)">
+          <span class="acc-num">08</span>
+          <span class="acc-title">Управлять должны те, кто уже доказал свою способность управлять</span>
+          <span class="acc-icon">+</span>
+        </div>
+        <div class="acc-body">Управленческие должности — не форма общественного признания. Руководить должны те, кто уже имеет подтверждённый опыт успешного управления. Человек, никогда не управлявший бизнесом или сложным проектом, не должен принимать решения, влияющие на развитие всей системы.</div>
+      </div>
+
+      <div class="acc-item">
+        <div class="acc-header" onclick="toggleAcc(this)">
+          <span class="acc-num">09</span>
+          <span class="acc-title">Развитие человека как актива системы</span>
+          <span class="acc-icon">+</span>
+        </div>
+        <div class="acc-body">Образование, профессиональный рост, здоровье — это инвестиции, а не расходы. Каждый успешный предприниматель, каждый человек, сумевший увеличить собственную ценность для рынка, усиливает всю организацию. Развитие человека — стратегическая инвестиция в собственное будущее.</div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="ph-section" style="margin-top:3rem">
+    <p class="ph-label">Опорные тексты</p>
+    <div class="essays-grid">
+
+      <a class="essay-card" href="/ru/essays/nation-without-territory">
+        <p class="ec-kicker">Стартовая страница</p>
+        <p class="ec-title">Нация без территории</p>
+        <p class="ec-deck">О том, почему беларусы в Польше до сих пор действуют поодиночке — и что с этим делать.</p>
+        <p class="ec-read">Читать →</p>
+      </a>
+
+      <a class="essay-card" href="/ru/essays/what-is-veishnoria">
+        <p class="ec-kicker">Описание проекта</p>
+        <p class="ec-title">Что такое Вейшнория Inc.</p>
+        <p class="ec-deck">Не государство, не партия, не фонд. Экстерриториальная сеть кооперации, созданная беларусами для беларусов.</p>
+        <p class="ec-read">Читать →</p>
+      </a>
+
+      <a class="essay-card" href="/ru/essays/problems-and-solutions">
+        <p class="ec-kicker">Проблемы и решения</p>
+        <p class="ec-title">Какие проблемы мы хотим решать</p>
+        <p class="ec-deck">Мы сосредотачиваемся на направлениях, которые оказывают наибольшее влияние на качество жизни беларусов в Польше.</p>
+        <p class="ec-read">Читать →</p>
+      </a>
+
+      <a class="essay-card" href="/ru/essays/roadmap">
+        <p class="ec-kicker">Дорожная карта</p>
+        <p class="ec-title">Последовательность этапов</p>
+        <p class="ec-deck">Устойчивые институты возникают постепенно. Они растут вместе с организацией и опираются на реальные потребности людей.</p>
+        <p class="ec-read">Читать →</p>
+      </a>
+
+    </div>
+  </section>
+
+</div>
+
+<script>
+function toggleAcc(header) {
+  const body = header.nextElementSibling;
+  const icon = header.querySelector('.acc-icon');
+  const isOpen = body.classList.contains('open');
+  document.querySelectorAll('.acc-body').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.acc-icon').forEach(i => { i.classList.remove('open'); i.textContent = '+'; });
+  if (!isOpen) {
+    body.classList.add('open');
+    icon.classList.add('open');
+    icon.textContent = '×';
+  }
+}
+</script>
+```
