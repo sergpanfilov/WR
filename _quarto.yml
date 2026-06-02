@@ -6,8 +6,8 @@ project:
     - "assets/**"
 
 website:
-  title: "White Ribbon"
-  description: "Essays on state craft and citizenship"
+  title: "Вейшнория Inc."
+  description: "Устойчивая диаспоральная организация беларусов в эмиграции"
   site-url: "https://white-ribbon.net"
   favicon: "assets/Logo_WR_dark.svg"
   page-navigation: false
@@ -22,24 +22,24 @@ website:
     background: "#FEFDF8"
     foreground: "#1A1A1A"
     logo: "assets/Logo_WR_light.svg"
-    logo-alt: "White Ribbon"
-    logo-href: "/"
+    logo-alt: "Вейшнория Inc."
+    logo-href: "/ru/"
     right:
-      - text: "EN"
-        href: en/index.qmd
-      - text: "RU"
-        href: ru/index.qmd
-      - text: "BE"
-        href: be/index.qmd
-      - text: "About"
+      - text: "О проекте"
         href: ru/about.qmd
+      - text: "Философия"
+        href: ru/philosophy.qmd
+      - text: "Проекты"
+        href: ru/projects.qmd
+      - text: "Присоединиться"
+        href: ru/join.qmd
   page-footer:
     background: "#FEFDF8"
     border: false
     left: |
-      <span class="footer-mark">White Ribbon · An Independent Project</span>
+      <span class="footer-mark">Вейшнория Inc. · Устойчивая диаспоральная организация</span>
     right: |
-      <span class="footer-meta">© 2026 · ISSN pending</span>
+      <span class="footer-meta">© 2026</span>
 
 format:
   html:

@@ -1,0 +1,10 @@
+---
+title: ""
+lang: ru
+page-layout: article
+title-block-style: none
+---
+
+::: {.callout-note}
+Раздел в разработке
+:::
