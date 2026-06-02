@@ -16,8 +16,8 @@
   // Localised About labels by current page language.
   const ABOUT_LABELS = {
     en: 'About',
-    ru: 'О проекте',
-    be: 'Пра праект',
+    ru: 'Мы',
+    be: 'Мы',
   };
 
   // Detect current page language from URL prefix.
