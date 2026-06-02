@@ -1494,6 +1494,36 @@ div.callout-note .callout-body {
 
 .philosophy-page { padding: 0; }
 
+#quarto-content.page-layout-custom > .philosophy-page {
+  padding-top: 0 !important;
+  min-height: 0 !important;
+}
+
+.page-layout-custom .philosophy-page {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+
+.ph-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 80px;
+  align-items: start;
+  padding: 48px 5rem;
+}
+
+.ph-right {
+  padding-top: 0;
+}
+
+.essays-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .ph-section { margin-bottom: 0; }
 
 .ph-kicker {
