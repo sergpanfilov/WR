@@ -1140,13 +1140,9 @@ div.callout-note .callout-body {
 }
 // === HOME PAGE ===
 
-// Quarto sets min-height: calc(-278px + 100vh) as inline style on
-// #quarto-content — override to prevent the empty gap below content.
-#quarto-content.page-layout-custom {
-  min-height: 0 !important;
-}
-
-// Kill padding-top added by #quarto-content > *
+// #quarto-content has inline style min-height: calc(-278px + 100vh)
+// which CSS cannot override. Instead we make .vi-home fill that space
+// so content occupies the viewport and footer sits at the bottom.
 #quarto-content.page-layout-custom > .vi-home {
   padding-top: 0 !important;
 }
@@ -1158,12 +1154,12 @@ div.callout-note .callout-body {
   width: 100% !important;
 }
 
-// Two-column grid: left hero + right stages
 .vi-home {
   display: grid;
-  grid-template-columns: 1fr 300px;
+  grid-template-columns: 1fr 380px;
   align-items: start;
   width: 100%;
+  min-height: calc(100vh - 140px - 94px); // viewport - navbar - footer
 }
 
 .vi-hero {
@@ -1243,8 +1239,7 @@ div.callout-note .callout-body {
   }
 }
 
-// Right column — stages
-// No padding-right: grid handles alignment with navbar right edge
+// Right column: padding mirrors navbar (5rem right, 48px top)
 .vi-stages {
   padding: 48px 5rem 48px 0;
   display: flex;
@@ -1294,26 +1289,17 @@ div.callout-note .callout-body {
   display: none;
 }
 
-.vi-stage.active .vi-stage-num {
-  color: $accent;
-}
-
-.vi-stage.active .vi-stage-title {
-  color: $body-color;
-}
-
-.vi-stage.active .vi-stage-desc {
-  display: block;
-}
+.vi-stage.active .vi-stage-num { color: $accent; }
+.vi-stage.active .vi-stage-title { color: $body-color; }
+.vi-stage.active .vi-stage-desc { display: block; }
 
 @media (max-width: 768px) {
   .vi-home {
     grid-template-columns: 1fr;
+    min-height: 0;
   }
 
-  .vi-stages {
-    display: none;
-  }
+  .vi-stages { display: none; }
 
   .vi-hero {
     padding: 2.5rem 1.25rem;
