@@ -2093,7 +2093,8 @@ div.callout-note .callout-body {
 
 .projects-wrapper {
   padding: 48px 5rem;
-  max-width: 1000px;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .pr-kicker {
@@ -2124,15 +2125,17 @@ div.callout-note .callout-body {
 }
 
 .projects-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
 }
 
 .project {
-  border-top: 0.5px solid $rule-color;
-  padding: 28px 0;
-
-  &:last-child { border-bottom: 0.5px solid $rule-color; }
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid $rule-color;
+  border-radius: 8px;
+  padding: 24px;
 }
 
 .project-meta {
@@ -2188,8 +2191,8 @@ div.callout-note .callout-body {
 
 .project-cols {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  grid-template-columns: 1fr;
+  gap: 16px;
   margin-bottom: 1.25rem;
 }
 
