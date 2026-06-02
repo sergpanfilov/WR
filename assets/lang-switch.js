@@ -17,11 +17,14 @@
 (function () {
   const LANGS = ['en', 'ru', 'be'];
 
-  // Localised About labels by current page language.
-  const ABOUT_LABELS = {
-    en: 'About',
-    ru: 'Мы',
-    be: 'Мы',
+  // Localised navbar labels by destination page and current language.
+  // Edit the values to taste — e.g. swap the Belarusian forms to your
+  // Taraškievica spellings if that's the house style.
+  const NAV_LABELS = {
+    about:      { en: 'About',      ru: 'Мы',        be: 'Мы' },
+    philosophy: { en: 'Philosophy', ru: 'Философия', be: 'Філасофія' },
+    projects:   { en: 'Projects',   ru: 'Проекты',   be: 'Праекты' },
+    join:       { en: 'Contact',    ru: 'Контакт',   be: 'Кантакт' },
   };
 
   // Detect current page language from URL prefix.
@@ -51,39 +54,49 @@
     return '/' + targetLang + '/';
   }
 
+  // HEAD-check whether a URL exists. Guarded by a 2s timeout so a slow or
+  // non-responding request can never block navigation.
   async function urlExists(url) {
     try {
-      const res = await fetch(url, { method: 'HEAD' });
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), 2000);
+      const res = await fetch(url, { method: 'HEAD', signal: ctrl.signal });
+      clearTimeout(timer);
       return res.ok;
     } catch (e) {
       return false;
     }
   }
 
-  // Locate the About link in the navbar. Match by href ending in
-  // /about.html or by text being one of the known About labels.
-  function findAboutLink() {
-    const links = document.querySelectorAll('#quarto-header a, .navbar a');
-    for (const a of links) {
-      const href = a.getAttribute('href') || '';
-      const text = (a.textContent || '').trim();
-      if (
-        /\/about(\.html)?$/.test(href) ||
-        Object.values(ABOUT_LABELS).includes(text)
-      ) {
-        return a;
-      }
+  // Identify which page a navbar link points to — by its visible text
+  // (in any language) or by its href filename. Returns 'about',
+  // 'philosophy', 'projects', 'join', or null.
+  function pageOfLink(a) {
+    const href = a.getAttribute('href') || '';
+    const text = (a.textContent || '').trim();
+    for (const page of Object.keys(NAV_LABELS)) {
+      if (Object.values(NAV_LABELS[page]).includes(text)) return page;
+      if (new RegExp('/' + page + '(\\.html)?$').test(href)) return page;
+      if (new RegExp(page + '\\.qmd$').test(href)) return page;
     }
     return null;
   }
 
-  // Rewrite the About link's label and href to match the current language.
-  function localizeAboutLink() {
+  // Localise the navbar item labels to the current page language.
+  // Only the About item's href is rewritten (About exists in every
+  // language); philosophy/projects/join currently live only under /ru/,
+  // so their hrefs are left untouched.
+  function localizeNavLabels() {
     const lang = currentLang();
-    const a = findAboutLink();
-    if (!a) return;
-    a.textContent = ABOUT_LABELS[lang];
-    a.setAttribute('href', '/' + lang + '/about.html');
+    const links = document.querySelectorAll('#quarto-header a, .navbar a');
+    links.forEach((a) => {
+      if (isLangLink(a)) return;
+      const page = pageOfLink(a);
+      if (!page) return;
+      const label = NAV_LABELS[page][lang];
+      if (label) a.textContent = label;
+      if (page === 'about') a.setAttribute('href', '/' + lang + '/about.html');
+    });
   }
 
   // Tag the language links so CSS can render them as a separate cluster,
@@ -139,14 +152,21 @@
         const target = langOf(a);
         const candidate = buildTargetUrl(target);
         const fallback = '/' + target + '/';
-        const ok = await urlExists(candidate);
-        window.location.href = ok ? candidate : fallback;
+        // Always navigate: try the mirrored page, fall back to the
+        // language home on any failure. Never leave the click dead.
+        let dest = fallback;
+        try {
+          dest = (await urlExists(candidate)) ? candidate : fallback;
+        } catch (err) {
+          dest = fallback;
+        }
+        window.location.href = dest;
       });
     });
   }
 
   function init() {
-    localizeAboutLink();
+    localizeNavLabels();
     decorateLangLinks();
     attachLangSwitchHandlers();
   }
