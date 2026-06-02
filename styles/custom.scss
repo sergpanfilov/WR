@@ -1140,34 +1140,31 @@ div.callout-note .callout-body {
 }
 // === HOME PAGE ===
 
-// vi-home is a direct child of #quarto-content (page-layout: custom).
-// Use .page-layout-custom context to scope all rules to home page only.
-.page-layout-custom .vi-home {
-  padding-top: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  max-width: none !important;
-  margin: 0 !important;
-  width: 100% !important;
-}
-
+// Kill Quarto's padding-top: 4rem on direct children of #quarto-content
 #quarto-content.page-layout-custom > .vi-home {
   padding-top: 0 !important;
 }
 
-// Two-column layout: 2/3 left (hero) + 1/3 right (stages)
+.page-layout-custom .vi-home {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+
+// Two-column grid: fixed left column + fixed right column
+// Left: hero with same horizontal padding as navbar (5rem)
+// Right: stages aligned with first navbar item
 .vi-home {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  min-height: calc(100vh - 140px);
+  grid-template-columns: minmax(0, 1fr) 280px;
+  align-items: start;
   width: 100%;
 }
 
 .vi-hero {
-  padding: 48px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  padding: 48px 5rem;
+  max-width: 640px;
 }
 
 .vi-kicker {
@@ -1189,6 +1186,7 @@ div.callout-note .callout-body {
 }
 
 .vi-body {
+  font-family: $font-family-serif;
   font-size: 0.85rem;
   line-height: 1.7;
   color: $muted;
@@ -1242,36 +1240,36 @@ div.callout-note .callout-body {
 }
 
 // Right column — stages
+// padding-top matches navbar padding + link padding to align with first nav item
 .vi-stages {
-  padding: 48px 28px;
+  padding: 48px 0 48px 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  gap: 0;
 }
 
 .vi-stage {
   display: flex;
+  align-items: baseline;
   gap: 10px;
-  padding: 7px 0;
+  padding: 6px 0;
 }
 
 .vi-stage-num {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: 0.6rem;
   letter-spacing: 0.1em;
   color: $muted;
-  min-width: 42px;
-  padding-top: 1px;
+  min-width: 44px;
   flex-shrink: 0;
 }
 
 .vi-stage-title {
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: $muted;
-  line-height: 1.3;
   font-family: $font-family-monospace;
-  letter-spacing: 0.03em;
+  font-size: 0.6rem;
+  letter-spacing: 0.05em;
+  color: $muted;
+  line-height: 1.4;
 }
 
 .vi-stage.active .vi-stage-num {
@@ -1280,10 +1278,9 @@ div.callout-note .callout-body {
 
 .vi-stage.active .vi-stage-title {
   color: $body-color;
-  font-weight: 500;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .vi-home {
     grid-template-columns: 1fr;
   }
@@ -1294,5 +1291,6 @@ div.callout-note .callout-body {
 
   .vi-hero {
     padding: 2.5rem 1.25rem;
+    max-width: none;
   }
 }
