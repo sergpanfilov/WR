@@ -1140,9 +1140,6 @@ div.callout-note .callout-body {
 }
 // === HOME PAGE ===
 
-// #quarto-content has inline style min-height: calc(-278px + 100vh)
-// which CSS cannot override. Instead we make .vi-home fill that space
-// so content occupies the viewport and footer sits at the bottom.
 #quarto-content.page-layout-custom > .vi-home {
   padding-top: 0 !important;
 }
@@ -1155,11 +1152,8 @@ div.callout-note .callout-body {
 }
 
 .vi-home {
-  display: grid;
-  grid-template-columns: 1fr 634px;
-  align-items: start;
+  display: block;
   width: 100%;
-  min-height: calc(100vh - 140px - 94px); // viewport - navbar - footer
 }
 
 .vi-hero {
@@ -1239,68 +1233,9 @@ div.callout-note .callout-body {
   }
 }
 
-// Right column: padding mirrors navbar (5rem right, 48px top)
-.vi-stages {
-  padding: 48px 5rem 48px 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.vi-stage {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 8px 0;
-  border-bottom: 0.5px solid $rule-color;
-
-  &:first-child { border-top: 0.5px solid $rule-color; }
-}
-
-.vi-stage-num {
-  font-family: $font-family-monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.1em;
-  color: $muted;
-  min-width: 44px;
-  flex-shrink: 0;
-  padding-top: 1px;
-}
-
-.vi-stage-content {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-}
-
-.vi-stage-title {
-  font-family: $font-family-monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.05em;
-  color: $muted;
-  line-height: 1.4;
-}
-
-.vi-stage-desc {
-  font-family: $font-family-monospace;
-  font-size: 0.5rem;
-  letter-spacing: 0.03em;
-  color: $muted;
-  line-height: 1.5;
-  display: none;
-}
-
-.vi-stage.active .vi-stage-num { color: $accent; }
-.vi-stage.active .vi-stage-title { color: $body-color; }
-.vi-stage.active .vi-stage-desc { display: block; }
+.vi-stages { display: none; }
 
 @media (max-width: 768px) {
-  .vi-home {
-    grid-template-columns: 1fr;
-    min-height: 0;
-  }
-
-  .vi-stages { display: none; }
-
   .vi-hero {
     padding: 2.5rem 1.25rem;
     max-width: none;

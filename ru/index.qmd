@@ -7,66 +7,17 @@ title-block-style: none
 
 ```{=html}
 <div class="vi-home">
-
   <div class="vi-hero">
-    <div>
-      <p class="vi-kicker">Беларусы в эмиграции</p>
-      <div class="vi-title">Нация без территории<br>нуждается в системе</div>
-      <div class="vi-body">
-        <p>Беларусы уже представляют собой распределённую сеть. Мы работаем в разных компаниях, ведём бизнесы в разных юрисдикциях, живём в разных странах. Но действуем поодиночке.</p>
-        <p>Вейшнория Inc. — попытка изменить это.</p>
-      </div>
-      <div class="vi-cta">
-        <a href="/ru/join" class="vi-btn-primary">Хочу участвовать</a>
-        <a href="/ru/about" class="vi-btn-secondary">Узнать больше</a>
-      </div>
+    <p class="vi-kicker">Беларусы в эмиграции</p>
+    <div class="vi-title">Нация без территории<br>нуждается в системе</div>
+    <div class="vi-body">
+      <p>Беларусы уже представляют собой распределённую сеть. Мы работаем в разных компаниях, ведём бизнесы в разных юрисдикциях, живём в разных странах. Но действуем поодиночке.</p>
+      <p>Вейшнория Inc. — попытка изменить это.</p>
+    </div>
+    <div class="vi-cta">
+      <a href="/ru/join" class="vi-btn-primary">Хочу участвовать</a>
+      <a href="/ru/about" class="vi-btn-secondary">Узнать больше</a>
     </div>
   </div>
-
-  <div class="vi-stages">
-    <div class="vi-stage active">
-      <span class="vi-stage-num">Этап 0</span>
-      <div class="vi-stage-content">
-        <div class="vi-stage-title">Инициативная группа</div>
-        <div class="vi-stage-desc">Собрать ядро единомышленников, готовых вкладывать время, знания и компетенции.</div>
-      </div>
-    </div>
-    <div class="vi-stage">
-      <span class="vi-stage-num">Этап 1</span>
-      <div class="vi-stage-content">
-        <div class="vi-stage-title">Проектирование системы</div>
-        <div class="vi-stage-desc">Юридическая форма, механизмы управления, финансовая модель.</div>
-      </div>
-    </div>
-    <div class="vi-stage">
-      <span class="vi-stage-num">Этап 2</span>
-      <div class="vi-stage-content">
-        <div class="vi-stage-title">Базовые сервисы</div>
-        <div class="vi-stage-desc">Поиск работы, юридическая помощь, профессиональные контакты.</div>
-      </div>
-    </div>
-    <div class="vi-stage">
-      <span class="vi-stage-num">Этап 3</span>
-      <div class="vi-stage-content">
-        <div class="vi-stage-title">Экономическая инфраструктура</div>
-        <div class="vi-stage-desc">Инвестфонд, лизинг, образовательные платформы.</div>
-      </div>
-    </div>
-    <div class="vi-stage">
-      <span class="vi-stage-num">Этап 4</span>
-      <div class="vi-stage-content">
-        <div class="vi-stage-title">Собственные институты</div>
-        <div class="vi-stage-desc">Кооперативный банк, медцентр, страхование.</div>
-      </div>
-    </div>
-    <div class="vi-stage">
-      <span class="vi-stage-num">Этап 5</span>
-      <div class="vi-stage-content">
-        <div class="vi-stage-title">Зрелая система</div>
-        <div class="vi-stage-desc">Устойчивая сеть, способная развиваться независимо от создателей.</div>
-      </div>
-    </div>
-  </div>
-
 </div>
 ```
