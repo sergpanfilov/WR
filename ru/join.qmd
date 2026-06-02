@@ -1,7 +1,7 @@
 ---
 title: ""
 lang: ru
-page-layout: article
+page-layout: custom
 title-block-style: none
 ---
 

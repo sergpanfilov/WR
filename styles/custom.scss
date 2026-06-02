@@ -1311,10 +1311,25 @@ div.callout-note .callout-body {
 
 .join-page { padding: 0; }
 
+#quarto-content.page-layout-custom > .join-page {
+  padding-top: 0 !important;
+}
+
+.page-layout-custom .join-page {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+}
+
+.join-page .join-layout {
+  padding: 48px 5rem;
+}
+
 .join-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 80px;
   align-items: start;
 }
 
@@ -1341,7 +1356,7 @@ div.callout-note .callout-body {
   font-size: 0.8rem;
   line-height: 1.7;
   color: $muted;
-  margin: 0 0 1.5rem;
+  margin: 0 0 20px;
 }
 
 .join-who-label {
@@ -1359,7 +1374,7 @@ div.callout-note .callout-body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 2px;
 
   li {
     font-family: $font-family-sans-serif;
@@ -1389,7 +1404,7 @@ div.callout-note .callout-body {
 }
 
 .form-group {
-  margin-bottom: 1.1rem;
+  margin-bottom: 14px;
 }
 
 .form-label {
