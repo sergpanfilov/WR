@@ -1307,132 +1307,169 @@ div.callout-note .callout-body {
   }
 }
 
-// === ABOUT PAGE ===
+// === JOIN PAGE ===
 
-.about-page { padding: 0; }
+.join-page { padding: 0; }
 
-.about-section { margin-bottom: 44px; }
+.join-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
 
-.about-kicker {
+.join-kicker {
   font-family: $font-family-monospace;
   font-size: 0.6rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: $accent;
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.9rem;
 }
 
-.about-title {
+.join-title {
   font-family: $font-family-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 400;
+  line-height: 1.35;
   color: $body-color;
-  margin: 0 0 0.6rem;
-  line-height: 1.25;
+  margin: 0 0 1rem;
 }
 
-.about-intro {
+.join-intro {
   font-family: $font-family-serif;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.7;
   color: $muted;
-  line-height: 1.65;
-  margin: 0 0 1.25rem;
+  margin: 0 0 1.5rem;
 }
 
-.about-label {
+.join-who-label {
   font-family: $font-family-monospace;
   font-size: 0.55rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: $muted;
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.6rem;
 }
 
-.assets-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.asset-tile {
-  background: darken($body-bg, 3%);
-  padding: 16px 18px;
-}
-
-.problems-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-.problem-tile {
-  border: 0.5px solid $rule-color;
-  padding: 14px 16px;
-}
-
-.tile-num {
-  font-family: $font-family-monospace;
-  font-size: 0.55rem;
-  letter-spacing: 0.1em;
-  color: $accent;
-  margin: 0 0 0.5rem;
-}
-
-.tile-title {
-  font-family: $font-family-sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: $body-color;
-  margin: 0 0 0.35rem;
-}
-
-.tile-body {
-  font-family: $font-family-sans-serif;
-  font-size: 0.7rem;
-  color: $muted;
-  line-height: 1.55;
+.join-who-list {
+  list-style: none;
+  padding: 0;
   margin: 0;
-}
-
-.roadmap { border-top: 0.5px solid $rule-color; }
-
-.roadmap-item {
   display: flex;
-  gap: 20px;
-  padding: 12px 0;
-  border-bottom: 0.5px solid $rule-color;
+  flex-direction: column;
+  gap: 5px;
 
-  &.active {
-    background: darken($body-bg, 3%);
-    margin: 0 -0.75rem;
-    padding: 12px 0.75rem;
+  li {
+    font-family: $font-family-sans-serif;
+    font-size: 0.75rem;
+    color: $muted;
+    padding-left: 12px;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: $accent;
+    }
   }
 }
 
-.rm-num {
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.form-group {
+  margin-bottom: 1.1rem;
+}
+
+.form-label {
+  display: block;
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.06em;
+  color: $muted;
+  margin-bottom: 5px;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  border: 0.5px solid $rule-color;
+  border-radius: 0;
+  padding: 8px 10px;
+  font-family: $font-family-sans-serif;
+  font-size: 0.75rem;
+  background: $body-bg;
+  color: $body-color;
+  outline: none;
+  transition: border-color 0.15s;
+
+  &:focus {
+    border-color: $muted;
+  }
+
+  &::placeholder {
+    color: lighten($muted, 15%);
+  }
+}
+
+.form-textarea {
+  resize: none;
+  height: 80px;
+  line-height: 1.5;
+}
+
+.form-hint {
+  font-family: $font-family-monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.03em;
+  color: $muted;
+  opacity: 0.6;
+  margin: 4px 0 0;
+  line-height: 1.5;
+}
+
+.form-submit {
+  width: 100%;
+  background: $accent;
+  color: #fff;
+  border: none;
+  padding: 10px;
   font-family: $font-family-monospace;
   font-size: 0.55rem;
   letter-spacing: 0.1em;
-  color: $muted;
-  min-width: 52px;
-  flex-shrink: 0;
-  padding-top: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  margin-top: 0.25rem;
+
+  &:hover { opacity: 0.88; }
 }
 
-.roadmap-item.active .rm-num { color: $accent; }
-
-.rm-title {
-  font-family: $font-family-sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: $body-color;
-  margin: 0 0 3px;
+.form-footer {
+  font-family: $font-family-monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.05em;
+  color: $muted;
+  opacity: 0.6;
+  text-align: center;
+  margin: 0.6rem 0 0;
 }
 
-.rm-body {
-  font-family: $font-family-sans-serif;
-  font-size: 0.7rem;
-  color: $muted;
-  line-height: 1.55;
-  margin: 0;
+@media (max-width: 768px) {
+  .join-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
 }

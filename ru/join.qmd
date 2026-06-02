@@ -5,6 +5,61 @@ page-layout: article
 title-block-style: none
 ---
 
-::: {.callout-note}
-Раздел в разработке
-:::
+```{=html}
+<div class="join-page">
+
+  <div class="join-layout">
+
+    <div class="join-left">
+      <p class="join-kicker">Этап 0</p>
+      <h1 class="join-title">Мы не собираем клуб комментаторов. Мы собираем команду людей, готовых строить.</h1>
+      <p class="join-intro">Нам не очень интересны участники, чья единственная роль — объяснять, почему ничего не получится. Нам нужны люди, способные не только видеть проблемы, но и предлагать практические решения.</p>
+      <p class="join-who-label">На этом этапе нам необходимы</p>
+      <ul class="join-who-list">
+        <li>Предприниматели</li>
+        <li>Юристы</li>
+        <li>IT-специалисты</li>
+        <li>Менеджеры проектов</li>
+        <li>Финансисты</li>
+        <li>Специалисты по инвестициям</li>
+        <li>Специалисты по организационному развитию</li>
+        <li>Люди с опытом управления реальными системами</li>
+      </ul>
+    </div>
+
+    <div class="join-right">
+      <div class="join-form">
+        <div class="form-group">
+          <label class="form-label">Имя</label>
+          <input class="form-input" type="text" placeholder="Как к вам обращаться">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Профессиональная область</label>
+          <select class="form-select">
+            <option value="">Выберите</option>
+            <option>Предпринимательство / бизнес</option>
+            <option>Право</option>
+            <option>Финансы / инвестиции</option>
+            <option>IT / технологии</option>
+            <option>Управление проектами</option>
+            <option>Другое</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Почему это важно для вас</label>
+          <textarea class="form-textarea" placeholder="Коротко — что привело вас сюда и что вы готовы вложить"></textarea>
+          <p class="form-hint">Ценность идеи определяется не количеством обсуждений, а способностью воплощаться в реальность.</p>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Контакт для связи</label>
+          <input class="form-input" type="text" placeholder="Email или Telegram">
+        </div>
+        <button class="form-submit" type="button">Отправить заявку</button>
+        <p class="form-footer">Мы свяжемся лично. Никаких рассылок без согласия.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+```
