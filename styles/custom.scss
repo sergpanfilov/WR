@@ -1286,12 +1286,12 @@ div.callout-note .callout-body {
   letter-spacing: 0.03em;
   color: $muted;
   line-height: 1.5;
-  display: none;
+  opacity: 0.6;
 }
 
 .vi-stage.active .vi-stage-num { color: $accent; }
 .vi-stage.active .vi-stage-title { color: $body-color; }
-.vi-stage.active .vi-stage-desc { display: block; }
+.vi-stage.active .vi-stage-desc { opacity: 1; }
 
 @media (max-width: 768px) {
   .vi-home {
