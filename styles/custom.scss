@@ -1140,19 +1140,24 @@ div.callout-note .callout-body {
 }
 // === HOME PAGE ===
 
-// vi-home is a direct child of #quarto-content which is a CSS grid.
-// Use ID-level specificity to stretch vi-home across the full viewport
-// and kill the padding-top: 4rem that #quarto-content > * adds.
-#quarto-content > .vi-home {
-  grid-column: screen-start / screen-end !important;
-  padding-top: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+// Strip all Quarto padding from vi-home and its container.
+// page-layout: full is used in index.qmd.
+#quarto-content > .vi-home,
+#quarto-content > div > .vi-home {
+  padding: 0 !important;
+  margin: 0 !important;
   max-width: none !important;
-  width: 100%;
+}
+
+.page-full #quarto-content {
+  padding: 0 !important;
+}
+
+.vi-home {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 140px);
+  width: 100%;
 }
 
 .vi-hero {
