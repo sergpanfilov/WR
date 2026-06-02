@@ -1138,3 +1138,129 @@ div.callout-note .callout-body {
     align-items: flex-start !important;
   }
 }
+// === HOME PAGE ===
+
+.vi-home {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 140px); // 140px = navbar min-height
+}
+
+.vi-hero {
+  padding: 5rem 5rem 4.5rem;
+  max-width: 560px;
+}
+
+.vi-kicker {
+  font-family: $font-family-monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $accent;
+  margin: 0 0 1.25rem;
+}
+
+.vi-title {
+  font-family: $font-family-serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: $body-color;
+  margin: 0 0 1.25rem;
+}
+
+.vi-body {
+  font-family: $font-family-serif;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: $muted;
+  margin: 0 0 2.25rem;
+  max-width: 30em;
+
+  p { margin: 0 0 0.75em; }
+  p:last-child { margin-bottom: 0; }
+}
+
+.vi-cta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.vi-btn-primary {
+  display: inline-block;
+  background: $accent;
+  color: #fff !important;
+  font-family: $font-family-monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  border-bottom: none !important;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+
+  &:hover {
+    opacity: 0.88;
+    border-bottom: none !important;
+  }
+}
+
+.vi-btn-secondary {
+  display: inline-block;
+  font-family: $font-family-monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $muted !important;
+  border-bottom: 1px solid $rule-color !important;
+  padding-bottom: 1px;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    color: $body-color !important;
+    border-bottom-color: $muted !important;
+  }
+}
+
+.vi-stage {
+  margin-top: auto;
+  padding: 0.9rem 5rem;
+  border-top: 1px solid $rule-color;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.vi-stage-dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: $accent;
+  flex-shrink: 0;
+}
+
+.vi-stage-text {
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $muted;
+}
+
+@media (max-width: 640px) {
+  .vi-hero {
+    padding: 3rem 1.25rem 2.5rem;
+  }
+
+  .vi-title {
+    font-size: 1.75rem;
+  }
+
+  .vi-stage {
+    padding: 0.9rem 1.25rem;
+  }
+}

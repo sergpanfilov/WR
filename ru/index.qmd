@@ -1,23 +1,30 @@
 ---
-title: "Белая лента"
-subtitle: "Эссе о виртуальных государствах и диаспорах"
+title: ""
 lang: ru
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: false
-  sort-ui: false
-  filter-ui: false
-  fields: [date, title, subtitle, reading-time]
-  date-format: "DD.MM.YYYY"
-  feed: true
-page-layout: article
-title-block-banner: false
+page-layout: custom
+title-block-style: none
 ---
 
-::: {.intro}
-*Белая лента* публикует эссе о номинальных и реальных демократических институтах в иммиграции,
-состояниях и переспективах национальных диаспор в изгнании.
-Основная цель этой публицистики — добиться системных изменений и нового качества жизни беларусов в эмиграции.
-:::
+```{=html}
+<div class="vi-home">
+
+  <div class="vi-hero">
+    <p class="vi-kicker">Беларусы в эмиграции</p>
+    <h1 class="vi-title">Нация без территории<br>нуждается в системе</h1>
+    <div class="vi-body">
+      <p>Беларусы уже представляют собой распределённую сеть. Мы работаем в разных компаниях, ведём бизнесы в разных юрисдикциях, живём в разных странах. Но действуем поодиночке.</p>
+      <p>Вейшнория Inc. — попытка изменить это.</p>
+    </div>
+    <div class="vi-cta">
+      <a href="/ru/join" class="vi-btn-primary">Хочу участвовать</a>
+      <a href="/ru/about" class="vi-btn-secondary">Узнать больше</a>
+    </div>
+  </div>
+
+  <div class="vi-stage">
+    <span class="vi-stage-dot"></span>
+    <span class="vi-stage-text">Этап 0 — формирование инициативной группы</span>
+  </div>
+
+</div>
+```
