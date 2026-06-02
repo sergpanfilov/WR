@@ -1140,6 +1140,22 @@ div.callout-note .callout-body {
 }
 // === HOME PAGE ===
 
+// Quarto wraps page-layout: custom content in #quarto-content which
+// adds padding via the grid system. When vi-home is present (home page
+// only), strip that padding so the hero fills edge-to-edge.
+#quarto-content:has(.vi-home),
+#quarto-content.page-layout-custom:has(.vi-home) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+// main.content also gets Quarto grid padding — remove it on home page
+main.content:has(.vi-home) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  max-width: none !important;
+}
+
 .vi-home {
   display: flex;
   flex-direction: column;
@@ -1158,6 +1174,13 @@ div.callout-note .callout-body {
 
 .vi-hero {
   padding: 5rem 5rem 4.5rem;
+  width: 100%;
+}
+
+.vi-kicker,
+.vi-title,
+.vi-body,
+.vi-cta {
   max-width: 560px;
 }
 
