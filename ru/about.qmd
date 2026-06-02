@@ -46,7 +46,7 @@ title-block-style: none
       </div>
       <div class="problem-tile">
         <p class="tile-title">Жильё</p>
-        <p class="tile-body">Кооперативный банк, собственные ипотечные программы, девелоперская компания.</p>
+        <p class="tile-body">Кооперативный банк, собственная ипотека, девелоперская компания.</p>
       </div>
       <div class="problem-tile">
         <p class="tile-title">Медицина</p>
@@ -58,7 +58,7 @@ title-block-style: none
       </div>
       <div class="problem-tile">
         <p class="tile-title">Правовая защита</p>
-        <p class="tile-body">Консультации, суды, коллективная защита от дискриминации. Один не судится — сообщество судится.</p>
+        <p class="tile-body">Консультации, суды, коллективная защита от дискриминации.</p>
       </div>
     </div>
   </section>
