@@ -34,7 +34,7 @@ $h2-font-size: 1.75rem;
 $h3-font-size: 1.375rem;
 
 // === CONTAINER ===
-$content-padding-top: 4rem;
+$content-padding-top: 1.5rem;
 
 /*-- scss:rules --*/
 
@@ -1359,7 +1359,7 @@ div.callout-note .callout-body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 2px;
 
   li {
     font-family: $font-family-sans-serif;
