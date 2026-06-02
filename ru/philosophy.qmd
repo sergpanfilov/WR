@@ -104,10 +104,17 @@ title-block-style: none
       <p class="ph-label">Опорные тексты</p>
       <div class="essays-stack">
 
-        <a class="essay-card" href="/ru/essays/nation-without-territory">
+        <a class="essay-card" href="/ru/essays/why-organization">
           <p class="ec-kicker">Стартовая страница</p>
-          <p class="ec-title">Нация без территории</p>
+          <p class="ec-title">Действуем поодиночке</p>
           <p class="ec-deck">О том, почему беларусы в Польше до сих пор действуют поодиночке — и что с этим делать.</p>
+          <p class="ec-read">Читать →</p>
+        </a>
+
+        <a class="essay-card" href="/ru/essays/nation-without-territory">
+          <p class="ec-kicker">Гостевое эссе</p>
+          <p class="ec-title">Нация без территории</p>
+          <p class="ec-deck">О коллективном капитале и самоорганизации беларуской диаспоры.</p>
           <p class="ec-read">Читать →</p>
         </a>
 
@@ -129,6 +136,20 @@ title-block-style: none
           <p class="ec-kicker">Дорожная карта</p>
           <p class="ec-title">Последовательность этапов</p>
           <p class="ec-deck">Устойчивые институты возникают постепенно. Они растут вместе с организацией и опираются на реальные потребности людей.</p>
+          <p class="ec-read">Читать →</p>
+        </a>
+
+        <a class="essay-card" href="/ru/essays/state-of-the-future">
+          <p class="ec-kicker">Наш взгляд на будущее</p>
+          <p class="ec-title">Государство будущего</p>
+          <p class="ec-deck">Почему современное государство — не окончательная форма, и каким может быть гражданин-совладелец системы.</p>
+          <p class="ec-read">Читать →</p>
+        </a>
+
+        <a class="essay-card" href="/ru/essays/missing-middle">
+          <p class="ec-kicker">Аналитическое эссе</p>
+          <p class="ec-title">Missing Middle</p>
+          <p class="ec-deck">Беларуские предприниматели в системе западной поддержки.</p>
           <p class="ec-read">Читать →</p>
         </a>
 
