@@ -15,7 +15,7 @@ title-block-style: none
       <p>Вейшнория Inc. — попытка изменить это.</p>
     </div>
     <div class="vi-cta">
-      <a href="/ru/join" class="vi-btn-primary">Хочу участвовать</a>
+      <a href="/ru/join" class="vi-btn-primary">Присоединиться</a>
       <a href="/ru/about" class="vi-btn-secondary">Узнать больше</a>
     </div>
   </div>
