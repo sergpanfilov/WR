@@ -91,6 +91,13 @@
     const links = document.querySelectorAll('#quarto-header a, .navbar a');
     links.forEach((a) => {
       if (isLangLink(a)) return;
+      // Only relabel real menu links. Quarto's tool anchors (dark-mode
+      // toggle, search) carry the CURRENT page's href, which would
+      // otherwise be mistaken for a nav item and get its label written
+      // over the icon.
+      if (!a.classList.contains('nav-link')) return;
+      if (a.classList.contains('quarto-color-scheme-toggle') ||
+          a.classList.contains('quarto-navigation-tool')) return;
       const page = pageOfLink(a);
       if (!page) return;
       const label = NAV_LABELS[page][lang];
