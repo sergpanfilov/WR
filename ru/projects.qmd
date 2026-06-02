@@ -9,76 +9,49 @@ title-block-style: none
 <div class="projects-page">
   <div class="projects-wrapper">
 
-    <p class="pr-kicker">Этап 0 · В работе</p>
+    <p class="pr-kicker">Этап 0 · в работе</p>
     <h1 class="pr-title">Проекты, к которым нужны люди</h1>
-    <p class="pr-intro">Вейшнория Inc. работает не только для тех, кто уже здесь. Два направления — жильё и работа — охватывают и диаспору в Польше, и тех, кто рассматривает переезд из Беларуси.</p>
+    <p class="pr-intro">Два направления — жильё и работа — охватывают и диаспору в Польше, и тех, кто рассматривает переезд из Беларуси.</p>
 
     <div class="projects-list">
 
       <div class="project">
         <div class="project-meta">
           <span class="project-num">01</span>
-          <span class="project-stage stage-design">Проектирование</span>
+          <span class="project-cat">Жильё</span>
         </div>
         <h2 class="project-title">Доступное жильё для беларусов в польских регионах</h2>
-        <p class="project-desc">Польский механизм социального жилищного строительства (TBS) позволяет создать модель, при которой жильё и работа становятся единым контрактом — без зависимости от аренды и без ипотечных барьеров. Проект работает через партнёрство с гминами депрессивных регионов и крупными работодателями. Не строим сами — упаковываем запросы регионов и согласовываем потребности работодателей.</p>
-        <div class="project-cols">
-          <div class="project-col">
-            <p class="pc-label">Стадия</p>
-            <ul class="pc-list">
-              <li>Переговоры с гминами — в процессе</li>
-              <li>Юридическая структура под польское НГО — на согласовании</li>
-              <li>Пилот — одна модельная реализация TBS в партнёрском городе</li>
-            </ul>
-          </div>
-          <div class="project-col">
-            <p class="pc-label">Нужны прямо сейчас</p>
-            <ul class="pc-list">
-              <li>Юрист по польскому жилищному и муниципальному праву</li>
-              <li>Девелопер или строительный менеджер с опытом в Польше</li>
-              <li>Координатор с контактами в польских гминах</li>
-            </ul>
-          </div>
+        <p class="project-desc">Через механизм социального жилья (TBS) и партнёрство с гминами депрессивных регионов связываем жильё и работу в один контракт — без аренды и ипотеки.</p>
+        <div class="project-roles">
+          <span class="role">Юрист</span>
+          <span class="role">Девелопер</span>
+          <span class="role">Координатор</span>
         </div>
-        <div class="project-cta">
-          <a href="/ru/join" class="project-btn">Хочу участвовать в этом проекте</a>
-          <span class="project-lock">Финансовая модель — участникам</span>
+        <div class="project-foot">
+          <a class="project-go" href="join.html">Участвовать →</a>
+          <span class="project-lock"><i class="bi bi-lock"></i> участникам</span>
         </div>
       </div>
 
       <div class="project">
         <div class="project-meta">
           <span class="project-num">02</span>
-          <span class="project-stage stage-team">Формирование команды</span>
+          <span class="project-cat">Работа</span>
         </div>
-        <h2 class="project-title">Инфраструктура трудоустройства: карты профессий и маршрутов</h2>
-        <p class="project-desc">Многие квалифицированные беларусы рассматривают переезд, но не имеют понятной модели входа: куда, на какую работу, на каких условиях. Проект создаёт карточки профессий, региональные маршруты и протоколы взаимодействия работодатель — кандидат. Целевая группа — специалисты реального сектора: машиностроение, логистика, энергетика, производство.</p>
-        <div class="project-cols">
-          <div class="project-col">
-            <p class="pc-label">Стадия</p>
-            <ul class="pc-list">
-              <li>Концепция и целевые профессии — определены</li>
-              <li>Переговоры с работодателями — не начаты</li>
-              <li>Информационный ресурс — в разработке</li>
-            </ul>
-          </div>
-          <div class="project-col">
-            <p class="pc-label">Нужны прямо сейчас</p>
-            <ul class="pc-list">
-              <li>HR-специалист с опытом найма в реальном секторе Польши</li>
-              <li>Аналитик рынка труда — польские регионы</li>
-              <li>Координатор по работе с работодателями</li>
-            </ul>
-          </div>
+        <h2 class="project-title">Вакансии для рабочих и служащих</h2>
+        <p class="project-desc">Прямые предложения от проверенных работодателей в Польше — для тех, кто уже здесь, и для тех, кто планирует переезд.</p>
+        <div class="project-roles">
+          <span class="role">Рекрутер</span>
+          <span class="role">HR-партнёр</span>
+          <span class="role">Аналитик</span>
         </div>
-        <div class="project-cta">
-          <a href="/ru/join" class="project-btn">Хочу участвовать в этом проекте</a>
-          <span class="project-lock">Список партнёров — участникам</span>
+        <div class="project-foot">
+          <a class="project-go" href="join.html">Участвовать →</a>
+          <span class="project-lock"><i class="bi bi-lock"></i> участникам</span>
         </div>
       </div>
 
     </div>
-
   </div>
 </div>
 ```
