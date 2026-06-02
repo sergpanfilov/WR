@@ -875,7 +875,7 @@ footer.footer,
 .footer {
   background: $body-bg !important;
   border-top: 1px solid $rule-color;
-  padding: 1.4rem 5rem;          // 80px horizontal, matches navbar
+  padding: 2.5rem 5rem;          // 80px horizontal, matches navbar
   font-family: $font-family-monospace;
   font-size: 0.7rem;
   letter-spacing: 0.2em;
@@ -1140,44 +1140,31 @@ div.callout-note .callout-body {
 }
 // === HOME PAGE ===
 
-// #quarto-content > * adds padding-top: 4rem to all direct children.
-// Kill it specifically for vi-home.
-#quarto-content > div:has(.vi-home) {
+// #quarto-content has inline style min-height: calc(-278px + 100vh)
+// which CSS cannot override. Instead we make .vi-home fill that space
+// so content occupies the viewport and footer sits at the bottom.
+#quarto-content.page-layout-custom > .vi-home {
   padding-top: 0 !important;
 }
 
-// The grid lives on #quarto-content. main.content is a direct child
-// and IS a grid item — stretch it edge-to-edge when home page is active.
-#quarto-content.page-layout-custom:has(.vi-home) {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-main.content:has(.vi-home) {
-  grid-column: screen-start / screen-end !important;
+.page-layout-custom .vi-home {
+  padding: 0 !important;
+  margin: 0 !important;
   max-width: none !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  padding-top: 0 !important;
+  width: 100% !important;
 }
 
 .vi-home {
-  display: flex;
-  flex-direction: column;
-  min-height: calc(100vh - 140px);
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  align-items: start;
   width: 100%;
+  min-height: calc(100vh - 140px - 94px); // viewport - navbar - footer
 }
 
 .vi-hero {
-  padding: 5rem 5rem 4.5rem;
-  width: 100%;
-}
-
-.vi-kicker,
-.vi-title,
-.vi-body,
-.vi-cta {
-  max-width: 560px;
+  padding: 48px 5rem;
+  max-width: 640px;
 }
 
 .vi-kicker {
@@ -1186,34 +1173,33 @@ main.content:has(.vi-home) {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: $accent;
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.9rem;
 }
 
 .vi-title {
   font-family: $font-family-serif;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.25;
   color: $body-color;
-  margin: 0 0 1.25rem;
+  margin: 0 0 0.9rem;
 }
 
 .vi-body {
   font-family: $font-family-serif;
-  font-size: 1rem;
-  line-height: 1.75;
+  font-size: 0.85rem;
+  line-height: 1.7;
   color: $muted;
-  margin: 0 0 2.25rem;
-  max-width: 30em;
+  margin: 0 0 1.5rem;
 
-  p { margin: 0 0 0.75em; }
+  p { margin: 0 0 0.5em; }
   p:last-child { margin-bottom: 0; }
 }
 
 .vi-cta {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 .vi-btn-primary {
@@ -1221,10 +1207,10 @@ main.content:has(.vi-home) {
   background: $accent;
   color: #fff !important;
   font-family: $font-family-monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 0.7rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 4px;
   border-bottom: none !important;
   text-decoration: none;
@@ -1239,57 +1225,84 @@ main.content:has(.vi-home) {
 .vi-btn-secondary {
   display: inline-block;
   font-family: $font-family-monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.12em;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $muted !important;
   border-bottom: 1px solid $rule-color !important;
   padding-bottom: 1px;
   text-decoration: none;
-  transition: color 0.15s ease, border-color 0.15s ease;
+  transition: color 0.15s ease;
 
   &:hover {
     color: $body-color !important;
-    border-bottom-color: $muted !important;
   }
+}
+
+// Right column: padding mirrors navbar (5rem right, 48px top)
+.vi-stages {
+  padding: 48px 5rem 48px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .vi-stage {
-  margin-top: auto;
-  padding: 0.9rem 5rem;
-  border-top: 1px solid $rule-color;
   display: flex;
-  align-items: center;
-  gap: 0.6rem;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 0.5px solid $rule-color;
+
+  &:first-child { border-top: 0.5px solid $rule-color; }
 }
 
-.vi-stage-dot {
-  display: inline-block;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: $accent;
-  flex-shrink: 0;
-}
-
-.vi-stage-text {
+.vi-stage-num {
   font-family: $font-family-monospace;
   font-size: 0.55rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: $muted;
+  min-width: 44px;
+  flex-shrink: 0;
+  padding-top: 1px;
 }
 
-@media (max-width: 640px) {
+.vi-stage-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.vi-stage-title {
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.05em;
+  color: $muted;
+  line-height: 1.4;
+}
+
+.vi-stage-desc {
+  font-family: $font-family-monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.03em;
+  color: $muted;
+  line-height: 1.5;
+  display: none;
+}
+
+.vi-stage.active .vi-stage-num { color: $accent; }
+.vi-stage.active .vi-stage-title { color: $body-color; }
+.vi-stage.active .vi-stage-desc { display: block; }
+
+@media (max-width: 768px) {
+  .vi-home {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .vi-stages { display: none; }
+
   .vi-hero {
-    padding: 3rem 1.25rem 2.5rem;
-  }
-
-  .vi-title {
-    font-size: 1.75rem;
-  }
-
-  .vi-stage {
-    padding: 0.9rem 1.25rem;
+    padding: 2.5rem 1.25rem;
+    max-width: none;
   }
 }
