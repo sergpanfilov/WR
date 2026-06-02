@@ -26,27 +26,45 @@ title-block-style: none
   <div class="vi-stages">
     <div class="vi-stage active">
       <span class="vi-stage-num">Этап 0</span>
-      <span class="vi-stage-title">Инициативная группа</span>
+      <div class="vi-stage-content">
+        <div class="vi-stage-title">Инициативная группа</div>
+        <div class="vi-stage-desc">Собрать ядро единомышленников, готовых вкладывать время, знания и компетенции.</div>
+      </div>
     </div>
     <div class="vi-stage">
       <span class="vi-stage-num">Этап 1</span>
-      <span class="vi-stage-title">Проектирование системы</span>
+      <div class="vi-stage-content">
+        <div class="vi-stage-title">Проектирование системы</div>
+        <div class="vi-stage-desc">Юридическая форма, механизмы управления, финансовая модель.</div>
+      </div>
     </div>
     <div class="vi-stage">
       <span class="vi-stage-num">Этап 2</span>
-      <span class="vi-stage-title">Базовые сервисы</span>
+      <div class="vi-stage-content">
+        <div class="vi-stage-title">Базовые сервисы</div>
+        <div class="vi-stage-desc">Поиск работы, юридическая помощь, профессиональные контакты.</div>
+      </div>
     </div>
     <div class="vi-stage">
       <span class="vi-stage-num">Этап 3</span>
-      <span class="vi-stage-title">Экономическая инфраструктура</span>
+      <div class="vi-stage-content">
+        <div class="vi-stage-title">Экономическая инфраструктура</div>
+        <div class="vi-stage-desc">Инвестфонд, лизинг, образовательные платформы.</div>
+      </div>
     </div>
     <div class="vi-stage">
       <span class="vi-stage-num">Этап 4</span>
-      <span class="vi-stage-title">Собственные институты</span>
+      <div class="vi-stage-content">
+        <div class="vi-stage-title">Собственные институты</div>
+        <div class="vi-stage-desc">Кооперативный банк, медцентр, страхование.</div>
+      </div>
     </div>
     <div class="vi-stage">
       <span class="vi-stage-num">Этап 5</span>
-      <span class="vi-stage-title">Зрелая система</span>
+      <div class="vi-stage-content">
+        <div class="vi-stage-title">Зрелая система</div>
+        <div class="vi-stage-desc">Устойчивая сеть, способная развиваться независимо от создателей.</div>
+      </div>
     </div>
   </div>
 
