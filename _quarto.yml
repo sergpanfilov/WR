@@ -31,7 +31,7 @@ website:
         href: ru/philosophy.qmd
       - text: "Проекты"
         href: ru/projects.qmd
-      - text: "Присоединиться"
+      - text: "Контакт"
         href: ru/join.qmd
   page-footer:
     background: "#FEFDF8"
