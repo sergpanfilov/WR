@@ -2256,3 +2256,14 @@ div.callout-note .callout-body {
   .projects-wrapper { padding: 2.5rem 1.25rem; }
   .project-cols { grid-template-columns: 1fr; gap: 20px; }
 }
+
+// === MOBILE: убрать «протекающий» заголовок активного раздела в навбаре ===
+// На мобиле Quarto выводит активный раздел (напр. «Философия») отдельным
+// элементом вне .navbar-nav, в дефолтном засечном шрифте, и он ложится
+// поверх гамбургера. В шапке сайта на мобиле должна быть только лого-марка,
+// поэтому прячем любой заголовок навбара, где бы Quarto его ни поставил.
+@media (max-width: 991px) {
+  #quarto-header > nav.navbar .navbar-title {
+    display: none !important;
+  }
+}
