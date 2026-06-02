@@ -1140,36 +1140,32 @@ div.callout-note .callout-body {
 }
 // === HOME PAGE ===
 
-// Quarto wraps page-layout: custom content in #quarto-content which
-// adds padding via the grid system. When vi-home is present (home page
-// only), strip that padding so the hero fills edge-to-edge.
-#quarto-content:has(.vi-home),
+// #quarto-content > * adds padding-top: 4rem to all direct children.
+// Kill it specifically for vi-home.
+#quarto-content > div:has(.vi-home) {
+  padding-top: 0 !important;
+}
+
+// The grid lives on #quarto-content. main.content is a direct child
+// and IS a grid item — stretch it edge-to-edge when home page is active.
 #quarto-content.page-layout-custom:has(.vi-home) {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-// main.content also gets Quarto grid padding — remove it on home page
 main.content:has(.vi-home) {
+  grid-column: screen-start / screen-end !important;
+  max-width: none !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
-  max-width: none !important;
+  padding-top: 0 !important;
 }
 
 .vi-home {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 140px); // 140px = navbar min-height
-
-  // Quarto renders page-layout: custom inside a CSS grid with named
-  // columns (screen-start .. body-start .. body .. body-end .. screen-end).
-  // Stretch vi-home across the full screen width.
-  grid-column: screen-start / screen-end !important;
+  min-height: calc(100vh - 140px);
   width: 100%;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
 }
 
 .vi-hero {
