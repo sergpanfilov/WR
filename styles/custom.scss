@@ -1140,21 +1140,26 @@ div.callout-note .callout-body {
 }
 // === HOME PAGE ===
 
-// Bootstrap sets max-width: 36em + padding + margin: auto on
-// main#quarto-document-content. Override with the exact selector
-// from bootstrap.min.css to beat its specificity.
-main#quarto-document-content,
-#quarto-document-content {
-  max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+// The article column rule above sets max-width: 36em on
+// main#quarto-document-content. On the home page (page-layout: custom)
+// that element doesn't exist — vi-home is the direct child of
+// #quarto-content. But we still need to zero out padding-top: 4rem
+// from #quarto-content > * and ensure vi-home fills the viewport.
+
+// page-layout: custom adds class .page-layout-custom to #quarto-content.
+// Use it to scope the override to the home page only.
+.page-layout-custom .vi-home,
+.page-layout-custom > .vi-home {
+  padding-top: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
-  padding-top: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  width: 100% !important;
 }
 
-// #quarto-content > * adds padding-top: 4rem — kill for home page only
-#quarto-content > .vi-home {
+// Kill the 4rem top padding that #quarto-content > * adds globally
+#quarto-content.page-layout-custom > .vi-home {
   padding-top: 0 !important;
 }
 
