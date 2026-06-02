@@ -1140,7 +1140,13 @@ div.callout-note .callout-body {
 }
 // === HOME PAGE ===
 
-// Kill Quarto's padding-top: 4rem on direct children of #quarto-content
+// Quarto sets min-height: calc(-278px + 100vh) as inline style on
+// #quarto-content — override to prevent the empty gap below content.
+#quarto-content.page-layout-custom {
+  min-height: 0 !important;
+}
+
+// Kill padding-top added by #quarto-content > *
 #quarto-content.page-layout-custom > .vi-home {
   padding-top: 0 !important;
 }
@@ -1152,12 +1158,10 @@ div.callout-note .callout-body {
   width: 100% !important;
 }
 
-// Two-column grid: fixed left column + fixed right column
-// Left: hero with same horizontal padding as navbar (5rem)
-// Right: stages aligned with first navbar item
+// Two-column grid: left hero + right stages
 .vi-home {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
+  grid-template-columns: 1fr 300px;
   align-items: start;
   width: 100%;
 }
@@ -1240,13 +1244,11 @@ div.callout-note .callout-body {
 }
 
 // Right column — stages
-// padding-right: 5rem mirrors navbar right edge
-// padding-top: 48px mirrors vi-hero top padding
+// No padding-right: grid handles alignment with navbar right edge
 .vi-stages {
   padding: 48px 5rem 48px 0;
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .vi-stage {
@@ -1272,7 +1274,7 @@ div.callout-note .callout-body {
 .vi-stage-content {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
 .vi-stage-title {
@@ -1289,7 +1291,6 @@ div.callout-note .callout-body {
   letter-spacing: 0.03em;
   color: $muted;
   line-height: 1.5;
-  opacity: 0.6;
   display: none;
 }
 
@@ -1303,8 +1304,6 @@ div.callout-note .callout-body {
 
 .vi-stage.active .vi-stage-desc {
   display: block;
-  opacity: 1;
-  color: $muted;
 }
 
 @media (max-width: 768px) {
