@@ -1626,3 +1626,270 @@ div.callout-note .callout-body {
   color: $muted;
   margin: 0;
 }
+
+// === ABOUT PAGE ===
+
+.about-page { padding: 0; }
+
+.about-section { margin-bottom: 44px; }
+
+.about-kicker {
+  font-family: $font-family-monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $accent;
+  margin: 0 0 0.6rem;
+}
+
+.about-title {
+  font-family: $font-family-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: $body-color;
+  margin: 0 0 0.6rem;
+  line-height: 1.25;
+}
+
+.about-intro {
+  font-family: $font-family-serif;
+  font-size: 0.85rem;
+  color: $muted;
+  line-height: 1.65;
+  margin: 0 0 1.25rem;
+}
+
+.about-label {
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $muted;
+  margin: 2.5rem 0 0.75rem;
+}
+
+.assets-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.asset-tile {
+  background: darken($body-bg, 3%);
+  padding: 16px 18px;
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.problem-tile {
+  border: 0.5px solid $rule-color;
+  padding: 14px 16px;
+}
+
+.tile-num {
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: $accent;
+  margin: 0 0 0.5rem;
+}
+
+.tile-title {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $body-color;
+  margin: 0 0 0.35rem;
+}
+
+.tile-body {
+  font-family: $font-family-sans-serif;
+  font-size: 0.7rem;
+  color: $muted;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.roadmap { border-top: 0.5px solid $rule-color; }
+
+.roadmap-item {
+  display: flex;
+  gap: 20px;
+  padding: 12px 0;
+  border-bottom: 0.5px solid $rule-color;
+
+  &.active {
+    background: darken($body-bg, 3%);
+    margin: 0 -0.75rem;
+    padding: 12px 0.75rem;
+  }
+}
+
+.rm-num {
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: $muted;
+  min-width: 52px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.roadmap-item.active .rm-num { color: $accent; }
+
+.rm-title {
+  font-family: $font-family-sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: $body-color;
+  margin: 0 0 3px;
+}
+
+.rm-body {
+  font-family: $font-family-sans-serif;
+  font-size: 0.7rem;
+  color: $muted;
+  line-height: 1.55;
+  margin: 0;
+}
+
+// === PHILOSOPHY PAGE ===
+
+.philosophy-page { padding: 0; }
+
+.ph-section { margin-bottom: 0; }
+
+.ph-kicker {
+  font-family: $font-family-monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: $accent;
+  margin: 0 0 0.6rem;
+}
+
+.ph-title {
+  font-family: $font-family-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: $body-color;
+  margin: 0 0 0.6rem;
+}
+
+.ph-intro {
+  font-family: $font-family-serif;
+  font-size: 0.8rem;
+  color: $muted;
+  line-height: 1.65;
+  margin: 0 0 1.5rem;
+}
+
+.ph-label {
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $muted;
+  margin: 0 0 0.75rem;
+}
+
+.accordion { border-top: 0.5px solid $rule-color; }
+
+.acc-item { border-bottom: 0.5px solid $rule-color; }
+
+.acc-header {
+  display: flex;
+  align-items: center;
+  padding: 11px 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.acc-num {
+  font-family: $font-family-monospace;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: $accent;
+  min-width: 28px;
+}
+
+.acc-title {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: $body-color;
+  flex: 1;
+}
+
+.acc-icon {
+  font-size: 1rem;
+  color: $muted;
+  line-height: 1;
+  font-family: $font-family-sans-serif;
+  font-weight: 400;
+  &.open { color: $body-color; }
+}
+
+.acc-body {
+  font-family: $font-family-serif;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: $muted;
+  padding: 0 0 12px 28px;
+  display: none;
+  &.open { display: block; }
+}
+
+.essays-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.essay-card {
+  display: block;
+  border: 0.5px solid $rule-color;
+  padding: 18px 20px;
+  text-decoration: none;
+  transition: border-color 0.15s;
+  &:hover { border-color: $muted; }
+}
+
+.ec-kicker {
+  font-family: $font-family-monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: $accent;
+  margin: 0 0 6px;
+}
+
+.ec-title {
+  font-family: $font-family-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: $body-color;
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+
+.ec-deck {
+  font-family: $font-family-serif;
+  font-size: 0.7rem;
+  color: $muted;
+  line-height: 1.55;
+  margin: 0 0 10px;
+}
+
+.ec-read {
+  font-family: $font-family-monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.08em;
+  color: $muted;
+  margin: 0;
+}
