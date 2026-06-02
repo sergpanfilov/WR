@@ -1144,6 +1144,16 @@ div.callout-note .callout-body {
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 140px); // 140px = navbar min-height
+
+  // Quarto renders page-layout: custom inside a CSS grid with named
+  // columns (screen-start .. body-start .. body .. body-end .. screen-end).
+  // Stretch vi-home across the full screen width.
+  grid-column: screen-start / screen-end !important;
+  width: 100%;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .vi-hero {
