@@ -127,7 +127,7 @@ title-block-style: none
 
         <a class="essay-card" href="/ru/essays/problems-and-solutions">
           <p class="ec-kicker">Проблемы и решения</p>
-          <p class="ec-title">ЧТо именно мы хотим решать</p>
+          <p class="ec-title">Что именно мы хотим решать</p>
           <p class="ec-deck">Мы сосредотачиваемся на направлениях, которые оказывают наибольшее влияние на качество жизни беларусов в Польше.</p>
           <p class="ec-read">Читать →</p>
         </a>
