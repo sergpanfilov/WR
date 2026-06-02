@@ -36,12 +36,12 @@ website:
       # Языковой переключатель. lang-switch.js перехватывает клик по
       # тексту RU/BE/EN и уводит на ту же страницу под нужным языком
       # (с откатом на языковую главную при 404). href — фолбэк.
-      - text: "RU"
-        href: /ru/
-      - text: "BE"
-        href: /be/
-      - text: "EN"
-        href: /en/
+      # - text: "RU"
+      # href: /ru/
+      # - text: "BE"
+      # href: /be/
+      # - text: "EN"
+      # href: /en/
   page-footer:
     background: "#FEFDF8"
     border: false
