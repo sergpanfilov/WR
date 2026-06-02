@@ -29,9 +29,19 @@ $font-family-base: $font-family-serif;
 $font-size-base: 1.25rem;   // 20px
 $line-height-base: 1.7;
 
-$h1-font-size: 3.25rem;
-$h2-font-size: 1.75rem;
-$h3-font-size: 1.375rem;
+// === TYPE SCALE (unified) ===
+// One ramp for the whole site (UI + long-form). Edit a size here, not inline.
+$fs-label: 0.625rem !default;  // 10px - mono labels: kickers, meta, buttons, badges, nav, byline, footer, captions
+$fs-sm:    0.75rem  !default;  // 12px - small text: card decks, lists, form fields, footnotes, dates
+$fs-text:  0.875rem !default;  // 14px - UI prose: intros, descriptions, accordion, tiles
+$fs-body:  1.125rem !default;  // 18px - long-form reading body (anchor)
+$fs-h3:    1.375rem !default;  // 22px - small headings: cards, projects, article h3, essay deck
+$fs-h2:    1.75rem  !default;  // 28px - page titles, home hero, article h2, listing title
+$fs-h1:    2.25rem  !default;  // 36px - main essay/article title
+
+$h1-font-size: $fs-h1;
+$h2-font-size: $fs-h2;
+$h3-font-size: $fs-h3;
 
 // === CONTAINER ===
 $content-padding-top: 4rem;
@@ -56,7 +66,7 @@ body {
   background: $body-bg;
   color: $body-color;
   font-family: $font-family-serif;
-  font-size: $font-size-base;
+  font-size: $fs-body;
   line-height: $line-height-base;
 }
 
@@ -115,7 +125,7 @@ body {
   .navbar-nav {
     .nav-link {
       font-family: $font-family-monospace;
-      font-size: 0.7rem;
+      font-size: $fs-label;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: $muted !important;
@@ -539,7 +549,7 @@ article {
 article h2 {
   font-family: $font-family-serif;
   font-weight: 700;
-  font-size: 1.75rem;
+  font-size: $fs-h2;
   letter-spacing: -0.01em;
   margin-top: 3.5rem;
   margin-bottom: 1.25rem;
@@ -550,7 +560,7 @@ article h3 {
   font-family: $font-family-serif;
   font-weight: 600;
   font-style: italic;
-  font-size: 1.375rem;
+  font-size: $fs-h3;
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
 }
@@ -588,7 +598,7 @@ a {
   margin-top: 4rem;
   padding-top: 1.5rem;
   border-top: 1px solid $rule-color;
-  font-size: 0.95rem;
+  font-size: $fs-sm;
   line-height: 1.55;
 
   ol {
@@ -611,7 +621,7 @@ sup a,
 .intro {
   font-family: $font-family-serif;
   font-style: italic;
-  font-size: 1.25rem;
+  font-size: $fs-body;
   line-height: 1.55;
   color: lighten($body-color, 20%);
   max-width: 36em;
@@ -700,7 +710,7 @@ sup a,
 .quarto-listing .quarto-post {
   .listing-date {
     font-family: $font-family-monospace;
-    font-size: 0.7rem;
+    font-size: $fs-label;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: $muted;
@@ -709,7 +719,7 @@ sup a,
 
   .listing-reading-time {
     font-family: $font-family-monospace;
-    font-size: 0.7rem;
+    font-size: $fs-label;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: $muted;
@@ -718,7 +728,7 @@ sup a,
   .listing-title {
     font-family: $font-family-serif;
     font-weight: 700;
-    font-size: 1.625rem;
+    font-size: $fs-h2;
     line-height: 1.15;
     letter-spacing: -0.01em;
     margin: 0 0 0.25rem;
@@ -736,7 +746,7 @@ sup a,
   .listing-subtitle {
     font-family: $font-family-serif;
     font-style: italic;
-    font-size: 1.0625rem;
+    font-size: $fs-h3;
     line-height: 1.4;
     color: lighten($body-color, 25%);
     margin: 0;
@@ -754,7 +764,7 @@ sup a,
 
 .kicker {
   font-family: $font-family-monospace;
-  font-size: 0.7rem;
+  font-size: $fs-label;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: $accent;
@@ -765,7 +775,7 @@ sup a,
 .essay-title {
   font-family: $font-family-serif;
   font-weight: 700;
-  font-size: clamp(2.25rem, 4.5vw, 3.25rem);
+  font-size: $fs-h1;
   line-height: 1.08;
   letter-spacing: -0.015em;
   text-align: left;
@@ -778,7 +788,7 @@ sup a,
   font-family: $font-family-serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 1.375rem;
+  font-size: $fs-h3;
   line-height: 1.4;
   color: lighten($body-color, 25%);
   text-align: left;
@@ -797,7 +807,7 @@ sup a,
 
 .byline {
   font-family: $font-family-monospace;
-  font-size: 0.7rem;
+  font-size: $fs-label;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: $muted;
@@ -826,7 +836,7 @@ sup a,
 
 .essay-end {
   font-family: $font-family-monospace;
-  font-size: 0.7rem;
+  font-size: $fs-label;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: $muted;
@@ -841,14 +851,14 @@ sup a,
   h1 {
     font-family: $font-family-display;
     font-weight: 100;
-    font-size: 3rem;
+    font-size: $fs-h1;
     letter-spacing: 0.1em;
     margin-bottom: 2rem;
   }
 
   a {
     font-family: $font-family-monospace;
-    font-size: 0.875rem;
+    font-size: $fs-text;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     border-bottom: none;
@@ -877,7 +887,7 @@ footer.footer,
   border-top: 1px solid $rule-color;
   padding: 2.5rem 5rem;          // 80px horizontal, matches navbar
   font-family: $font-family-monospace;
-  font-size: 0.7rem;
+  font-size: $fs-label;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: $muted;
@@ -935,7 +945,7 @@ footer.footer,
   margin: 2rem auto;
   max-width: 36em;
   font-family: $font-family-serif;
-  font-size: 1rem;
+  font-size: $fs-body;
 
   .callout-title {
     display: none;
@@ -946,11 +956,11 @@ footer.footer,
 
 @media (max-width: 640px) {
   body {
-    font-size: 1.125rem;
+    font-size: $fs-body;
   }
 
   .quarto-title h1.title {
-    font-size: 2rem;
+    font-size: $fs-h1;
   }
 
   article .dropcap-paragraph::first-letter,
@@ -1045,7 +1055,7 @@ div.callout-note {
 div.callout-note > .callout-header {
   color: #1a1a1a;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
+  font-size: $fs-label;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   padding-left: 0 !important;
@@ -1059,7 +1069,7 @@ div.callout-note .callout-title-container {
 .quarto-figure table,
 table.table,
 .cell-output-display table {
-  font-size: 0.95em;
+  font-size: $fs-text;
   width: 100% !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -1072,7 +1082,7 @@ table.table thead th,
 .cell-output-display table thead th {
   text-align: right !important;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7em;
+  font-size: $fs-label;
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -1113,7 +1123,7 @@ caption,
   text-align: right !important;
   caption-side: top;
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.5em;
+  font-size: $fs-label;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #888;
@@ -1169,7 +1179,7 @@ div.callout-note .callout-body {
 
 .vi-kicker {
   font-family: $font-family-monospace;
-  font-size: 0.6rem;
+  font-size: $fs-label;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: $accent;
@@ -1178,7 +1188,7 @@ div.callout-note .callout-body {
 
 .vi-title {
   font-family: $font-family-serif;
-  font-size: 1.75rem;
+  font-size: $fs-h2;
   font-weight: 400;
   line-height: 1.25;
   color: $body-color;
@@ -1187,7 +1197,7 @@ div.callout-note .callout-body {
 
 .vi-body {
   font-family: $font-family-serif;
-  font-size: 0.85rem;
+  font-size: $fs-text;
   line-height: 1.7;
   color: $muted;
   margin: 0 0 1.5rem;
@@ -1207,7 +1217,7 @@ div.callout-note .callout-body {
   background: $accent;
   color: #fff !important;
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.6rem 1.2rem;
@@ -1225,7 +1235,7 @@ div.callout-note .callout-body {
 .vi-btn-secondary {
   display: inline-block;
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: $muted !important;
@@ -1258,7 +1268,7 @@ div.callout-note .callout-body {
 
 .vi-stage-num {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.1em;
   color: $muted;
   min-width: 44px;
@@ -1274,7 +1284,7 @@ div.callout-note .callout-body {
 
 .vi-stage-title {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.05em;
   color: $muted;
   line-height: 1.4;
@@ -1282,7 +1292,7 @@ div.callout-note .callout-body {
 
 .vi-stage-desc {
   font-family: $font-family-monospace;
-  font-size: 0.5rem;
+  font-size: $fs-label;
   letter-spacing: 0.03em;
   color: $muted;
   line-height: 1.5;
@@ -1336,7 +1346,7 @@ div.callout-note .callout-body {
 
 .join-kicker {
   font-family: $font-family-monospace;
-  font-size: 0.6rem;
+  font-size: $fs-label;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: $accent;
@@ -1345,7 +1355,7 @@ div.callout-note .callout-body {
 
 .join-title {
   font-family: $font-family-serif;
-  font-size: 1.25rem;
+  font-size: $fs-h2;
   font-weight: 400;
   line-height: 1.35;
   color: $body-color;
@@ -1354,7 +1364,7 @@ div.callout-note .callout-body {
 
 .join-intro {
   font-family: $font-family-serif;
-  font-size: 0.8rem;
+  font-size: $fs-text;
   line-height: 1.7;
   color: $muted;
   margin: 0 0 20px;
@@ -1362,7 +1372,7 @@ div.callout-note .callout-body {
 
 .join-who-label {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: $muted;
@@ -1379,7 +1389,7 @@ div.callout-note .callout-body {
 
   li {
     font-family: $font-family-sans-serif;
-    font-size: 0.75rem;
+    font-size: $fs-sm;
     color: $muted;
     padding-left: 12px;
     position: relative;
@@ -1411,7 +1421,7 @@ div.callout-note .callout-body {
 .form-label {
   display: block;
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.06em;
   color: $muted;
   margin-bottom: 5px;
@@ -1425,7 +1435,7 @@ div.callout-note .callout-body {
   border-radius: 0;
   padding: 8px 10px;
   font-family: $font-family-sans-serif;
-  font-size: 0.75rem;
+  font-size: $fs-sm;
   background: $body-bg;
   color: $body-color;
   outline: none;
@@ -1448,7 +1458,7 @@ div.callout-note .callout-body {
 
 .form-hint {
   font-family: $font-family-monospace;
-  font-size: 0.5rem;
+  font-size: $fs-label;
   letter-spacing: 0.03em;
   color: $muted;
   opacity: 0.6;
@@ -1463,7 +1473,7 @@ div.callout-note .callout-body {
   border: none;
   padding: 10px;
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
@@ -1475,7 +1485,7 @@ div.callout-note .callout-body {
 
 .form-footer {
   font-family: $font-family-monospace;
-  font-size: 0.5rem;
+  font-size: $fs-label;
   letter-spacing: 0.05em;
   color: $muted;
   opacity: 0.6;
@@ -1529,7 +1539,7 @@ div.callout-note .callout-body {
 
 .ph-kicker {
   font-family: $font-family-monospace;
-  font-size: 0.6rem;
+  font-size: $fs-label;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: $accent;
@@ -1538,7 +1548,7 @@ div.callout-note .callout-body {
 
 .ph-title {
   font-family: $font-family-serif;
-  font-size: 1.35rem;
+  font-size: $fs-h2;
   font-weight: 400;
   line-height: 1.3;
   color: $body-color;
@@ -1547,7 +1557,7 @@ div.callout-note .callout-body {
 
 .ph-intro {
   font-family: $font-family-serif;
-  font-size: 0.8rem;
+  font-size: $fs-text;
   color: $muted;
   line-height: 1.65;
   margin: 0 0 1.5rem;
@@ -1555,7 +1565,7 @@ div.callout-note .callout-body {
 
 .ph-label {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: $muted;
@@ -1576,7 +1586,7 @@ div.callout-note .callout-body {
 
 .acc-num {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.1em;
   color: $accent;
   min-width: 28px;
@@ -1584,7 +1594,7 @@ div.callout-note .callout-body {
 
 .acc-title {
   font-family: $font-family-sans-serif;
-  font-size: 0.8rem;
+  font-size: $fs-text;
   font-weight: 500;
   color: $body-color;
   flex: 1;
@@ -1601,7 +1611,7 @@ div.callout-note .callout-body {
 
 .acc-body {
   font-family: $font-family-serif;
-  font-size: 0.8rem;
+  font-size: $fs-text;
   line-height: 1.7;
   color: $muted;
   padding: 0 0 12px 28px;
@@ -1626,7 +1636,7 @@ div.callout-note .callout-body {
 
 .ec-kicker {
   font-family: $font-family-monospace;
-  font-size: 0.5rem;
+  font-size: $fs-label;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: $accent;
@@ -1635,7 +1645,7 @@ div.callout-note .callout-body {
 
 .ec-title {
   font-family: $font-family-serif;
-  font-size: 0.9rem;
+  font-size: $fs-text;
   font-weight: 400;
   color: $body-color;
   margin: 0 0 6px;
@@ -1644,7 +1654,7 @@ div.callout-note .callout-body {
 
 .ec-deck {
   font-family: $font-family-serif;
-  font-size: 0.7rem;
+  font-size: $fs-sm;
   color: $muted;
   line-height: 1.55;
   margin: 0 0 10px;
@@ -1652,7 +1662,7 @@ div.callout-note .callout-body {
 
 .ec-read {
   font-family: $font-family-monospace;
-  font-size: 0.5rem;
+  font-size: $fs-label;
   letter-spacing: 0.08em;
   color: $muted;
   margin: 0;
@@ -1683,7 +1693,7 @@ div.callout-note .callout-body {
 
 .about-kicker {
   font-family: $font-family-monospace;
-  font-size: 0.6rem;
+  font-size: $fs-label;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: $accent;
@@ -1692,7 +1702,7 @@ div.callout-note .callout-body {
 
 .about-title {
   font-family: $font-family-serif;
-  font-size: 1.5rem;
+  font-size: $fs-h2;
   font-weight: 400;
   color: $body-color;
   margin: 0 0 0.6rem;
@@ -1701,7 +1711,7 @@ div.callout-note .callout-body {
 
 .about-intro {
   font-family: $font-family-serif;
-  font-size: 0.85rem;
+  font-size: $fs-text;
   color: $muted;
   line-height: 1.65;
   margin: 0 0 1.25rem;
@@ -1709,7 +1719,7 @@ div.callout-note .callout-body {
 
 .about-label {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: $muted;
@@ -1740,7 +1750,7 @@ div.callout-note .callout-body {
 
 .tile-num {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.1em;
   color: $accent;
   margin: 0 0 0.5rem;
@@ -1748,7 +1758,7 @@ div.callout-note .callout-body {
 
 .tile-title {
   font-family: $font-family-sans-serif;
-  font-size: 0.8rem;
+  font-size: $fs-text;
   font-weight: 500;
   color: $body-color;
   margin: 0 0 0.35rem;
@@ -1756,7 +1766,7 @@ div.callout-note .callout-body {
 
 .tile-body {
   font-family: $font-family-sans-serif;
-  font-size: 0.7rem;
+  font-size: $fs-sm;
   color: $muted;
   line-height: 1.55;
   margin: 0;
@@ -1779,7 +1789,7 @@ div.callout-note .callout-body {
 
 .rm-num {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.1em;
   color: $muted;
   min-width: 52px;
@@ -1791,7 +1801,7 @@ div.callout-note .callout-body {
 
 .rm-title {
   font-family: $font-family-sans-serif;
-  font-size: 0.75rem;
+  font-size: $fs-text;
   font-weight: 500;
   color: $body-color;
   margin: 0 0 3px;
@@ -1799,7 +1809,7 @@ div.callout-note .callout-body {
 
 .rm-body {
   font-family: $font-family-sans-serif;
-  font-size: 0.7rem;
+  font-size: $fs-sm;
   color: $muted;
   line-height: 1.55;
   margin: 0;
@@ -1813,7 +1823,7 @@ div.callout-note .callout-body {
 
 .ph-kicker {
   font-family: $font-family-monospace;
-  font-size: 0.6rem;
+  font-size: $fs-label;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: $accent;
@@ -1822,7 +1832,7 @@ div.callout-note .callout-body {
 
 .ph-title {
   font-family: $font-family-serif;
-  font-size: 1.35rem;
+  font-size: $fs-h2;
   font-weight: 400;
   line-height: 1.3;
   color: $body-color;
@@ -1831,7 +1841,7 @@ div.callout-note .callout-body {
 
 .ph-intro {
   font-family: $font-family-serif;
-  font-size: 0.8rem;
+  font-size: $fs-text;
   color: $muted;
   line-height: 1.65;
   margin: 0 0 1.5rem;
@@ -1839,7 +1849,7 @@ div.callout-note .callout-body {
 
 .ph-label {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: $muted;
@@ -1860,7 +1870,7 @@ div.callout-note .callout-body {
 
 .acc-num {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.1em;
   color: $accent;
   min-width: 28px;
@@ -1868,7 +1878,7 @@ div.callout-note .callout-body {
 
 .acc-title {
   font-family: $font-family-sans-serif;
-  font-size: 0.8rem;
+  font-size: $fs-text;
   font-weight: 500;
   color: $body-color;
   flex: 1;
@@ -1885,7 +1895,7 @@ div.callout-note .callout-body {
 
 .acc-body {
   font-family: $font-family-serif;
-  font-size: 0.8rem;
+  font-size: $fs-text;
   line-height: 1.7;
   color: $muted;
   padding: 0 0 12px 28px;
@@ -1910,7 +1920,7 @@ div.callout-note .callout-body {
 
 .ec-kicker {
   font-family: $font-family-monospace;
-  font-size: 0.5rem;
+  font-size: $fs-label;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: $accent;
@@ -1919,7 +1929,7 @@ div.callout-note .callout-body {
 
 .ec-title {
   font-family: $font-family-serif;
-  font-size: 0.9rem;
+  font-size: $fs-text;
   font-weight: 400;
   color: $body-color;
   margin: 0 0 6px;
@@ -1928,7 +1938,7 @@ div.callout-note .callout-body {
 
 .ec-deck {
   font-family: $font-family-serif;
-  font-size: 0.7rem;
+  font-size: $fs-sm;
   color: $muted;
   line-height: 1.55;
   margin: 0 0 10px;
@@ -1936,7 +1946,7 @@ div.callout-note .callout-body {
 
 .ec-read {
   font-family: $font-family-monospace;
-  font-size: 0.5rem;
+  font-size: $fs-label;
   letter-spacing: 0.08em;
   color: $muted;
   margin: 0;
@@ -2088,7 +2098,7 @@ div.callout-note .callout-body {
 
 .pr-kicker {
   font-family: $font-family-monospace;
-  font-size: 0.6rem;
+  font-size: $fs-label;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: $accent;
@@ -2097,7 +2107,7 @@ div.callout-note .callout-body {
 
 .pr-title {
   font-family: $font-family-serif;
-  font-size: 1.5rem;
+  font-size: $fs-h2;
   font-weight: 400;
   color: $body-color;
   margin: 0 0 0.6rem;
@@ -2106,7 +2116,7 @@ div.callout-note .callout-body {
 
 .pr-intro {
   font-family: $font-family-serif;
-  font-size: 0.85rem;
+  font-size: $fs-text;
   color: $muted;
   line-height: 1.65;
   margin: 0 0 2rem;
@@ -2134,14 +2144,14 @@ div.callout-note .callout-body {
 
 .project-num {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.1em;
   color: $accent;
 }
 
 .project-stage {
   font-family: $font-family-monospace;
-  font-size: 0.5rem;
+  font-size: $fs-label;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: 3px 8px;
@@ -2160,7 +2170,7 @@ div.callout-note .callout-body {
 
 .project-title {
   font-family: $font-family-serif;
-  font-size: 1.15rem;
+  font-size: $fs-h3;
   font-weight: 400;
   color: $body-color;
   margin: 0 0 0.5rem;
@@ -2169,7 +2179,7 @@ div.callout-note .callout-body {
 
 .project-desc {
   font-family: $font-family-sans-serif;
-  font-size: 0.8rem;
+  font-size: $fs-text;
   color: $muted;
   line-height: 1.65;
   margin: 0 0 1.25rem;
@@ -2185,7 +2195,7 @@ div.callout-note .callout-body {
 
 .pc-label {
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: $muted;
@@ -2202,7 +2212,7 @@ div.callout-note .callout-body {
 
   li {
     font-family: $font-family-sans-serif;
-    font-size: 0.75rem;
+    font-size: $fs-sm;
     color: $muted;
     line-height: 1.5;
     padding-left: 12px;
@@ -2232,7 +2242,7 @@ div.callout-note .callout-body {
   background: $accent;
   color: #fff !important;
   font-family: $font-family-monospace;
-  font-size: 0.55rem;
+  font-size: $fs-label;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   padding: 0.6rem 1.2rem;
@@ -2246,7 +2256,7 @@ div.callout-note .callout-body {
 
 .project-lock {
   font-family: $font-family-monospace;
-  font-size: 0.5rem;
+  font-size: $fs-label;
   letter-spacing: 0.05em;
   color: $muted;
   opacity: 0.6;
@@ -2255,15 +2265,4 @@ div.callout-note .callout-body {
 @media (max-width: 768px) {
   .projects-wrapper { padding: 2.5rem 1.25rem; }
   .project-cols { grid-template-columns: 1fr; gap: 20px; }
-}
-
-// === MOBILE: убрать «протекающий» заголовок активного раздела в навбаре ===
-// На мобиле Quarto выводит активный раздел (напр. «Философия») отдельным
-// элементом вне .navbar-nav, в дефолтном засечном шрифте, и он ложится
-// поверх гамбургера. В шапке сайта на мобиле должна быть только лого-марка,
-// поэтому прячем любой заголовок навбара, где бы Quarto его ни поставил.
-@media (max-width: 991px) {
-  #quarto-header > nav.navbar .navbar-title {
-    display: none !important;
-  }
 }
