@@ -1140,32 +1140,19 @@ div.callout-note .callout-body {
 }
 // === HOME PAGE ===
 
-// #quarto-content > * adds padding-top: 4rem to all direct children.
-// Kill it specifically for vi-home.
-#quarto-content > div:has(.vi-home) {
-  padding-top: 0 !important;
-}
-
-// The grid lives on #quarto-content. main.content is a direct child
-// and IS a grid item — stretch it edge-to-edge when home page is active.
-#quarto-content.page-layout-custom:has(.vi-home) {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-main.content:has(.vi-home) {
+// vi-home is a direct child of #quarto-content which is a CSS grid.
+// Use ID-level specificity to stretch vi-home across the full viewport
+// and kill the padding-top: 4rem that #quarto-content > * adds.
+#quarto-content > .vi-home {
   grid-column: screen-start / screen-end !important;
-  max-width: none !important;
+  padding-top: 0 !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
-  padding-top: 0 !important;
-}
-
-.vi-home {
+  max-width: none !important;
+  width: 100%;
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 140px);
-  width: 100%;
 }
 
 .vi-hero {
