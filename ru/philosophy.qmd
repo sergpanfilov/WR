@@ -112,7 +112,7 @@ title-block-style: none
         </a>
 
         <a class="essay-card" href="/ru/essays/nation-without-territory">
-          <p class="ec-kicker">Гостевое эссе</p>
+          <p class="ec-kicker">Аналитическое эссе</p>
           <p class="ec-title">Нация без территории</p>
           <p class="ec-deck">О коллективном капитале и самоорганизации беларуской диаспоры.</p>
           <p class="ec-read">Читать →</p>
@@ -147,7 +147,7 @@ title-block-style: none
         </a>
 
         <a class="essay-card" href="/ru/essays/missing-middle">
-          <p class="ec-kicker">Аналитическое эссе</p>
+          <p class="ec-kicker">Гостевое эссе</p>
           <p class="ec-title">Missing Middle</p>
           <p class="ec-deck">Беларуские предприниматели в системе западной поддержки.</p>
           <p class="ec-read">Читать →</p>
