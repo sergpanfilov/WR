@@ -12,12 +12,12 @@ title-block-style: none
   <section class="about-section">
     <p class="about-kicker">Что мы строим</p>
     <h1 class="about-title">Четыре вида активов</h1>
-    <p class="about-intro">Сильное сообщество начинается не с деклараций. Оно начинается с полезных для его участников механизмов.</p>
+    <p class="about-intro">Организация начинается не с деклараций. Оно начинается с полезных для участников механизмов.</p>
     <div class="assets-grid">
       <div class="asset-tile">
         <p class="tile-num">01</p>
         <p class="tile-title">Капитал</p>
-        <p class="tile-body">Сообщество, не обладающее собственным капиталом, неизбежно остаётся зависимым от внешних обстоятельств.</p>
+        <p class="tile-body">Общество, не обладающее собственным капиталом, неизбежно остаётся зависимым от внешних обстоятельств.</p>
       </div>
       <div class="asset-tile">
         <p class="tile-num">02</p>
