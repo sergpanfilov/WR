@@ -1942,30 +1942,54 @@ div.callout-note .callout-body {
   margin: 0;
 }
 
-// === MOBILE: PHILOSOPHY + ABOUT (added) ===
-// Эти две страницы не сворачивались на мобиле: фиксированные сетки
-// и боковой отступ 5rem. Брейкпоинт согласован с главной и join (768px).
+// === MOBILE FIXES (added) ===
+// Поля страниц — брейкпоинт 768px (как у главной/join);
+// меню навбара — 640px (как существующий мобильный блок навбара выше).
+
 @media (max-width: 768px) {
 
-  // --- Философия ---
+  // --- Философия: одна колонка, нормальные боковые поля ---
   .ph-layout {
-    grid-template-columns: 1fr;   // принципы и карточки — друг под другом
+    grid-template-columns: 1fr;
     gap: 2.5rem;
-    padding: 2.5rem 1.25rem;      // вместо 48px 5rem
+    padding: 2.5rem 1.25rem;   // вместо 48px 5rem
   }
-
   .essays-stack,
   .essays-grid {
-    grid-template-columns: 1fr;   // карточки эссе в один столбец
+    grid-template-columns: 1fr;
   }
 
-  // --- О проекте ---
+  // --- О проекте: одна колонка, нормальные поля ---
   .about-wrapper {
-    padding: 2.5rem 1.25rem;      // вместо 48px 5rem
+    padding: 2.5rem 1.25rem;   // вместо 48px 5rem
   }
-
   .assets-grid,
   .problems-grid {
-    grid-template-columns: 1fr;   // плашки активов и проблем в один столбец
+    grid-template-columns: 1fr;
+  }
+
+  // --- Контакт (join): поля текста.
+  // База задана как `.join-page .join-layout` (2 класса) и перебивала
+  // одиночный `.join-layout`, поэтому тут та же специфичность. ---
+  .join-page .join-layout {
+    padding: 2.5rem 1.25rem;   // вместо 48px 5rem
+  }
+}
+
+// --- Навбар: раскрытое меню на мобиле — в столбец, а не в строку.
+// Та же специфичность, что у row-правила выше, + !important + позже
+// в файле => перебивает `flex-direction: row !important`. ---
+@media (max-width: 640px) {
+  #quarto-header > nav.navbar .navbar-collapse.show .navbar-nav,
+  #quarto-header > nav.navbar .navbar-collapse.collapsing .navbar-nav {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.9rem;
+  }
+  // В столбце не нужно отжимать последний пункт вправо.
+  #quarto-header > nav.navbar .navbar-collapse.show .nav-item:last-child,
+  #quarto-header > nav.navbar .navbar-collapse.collapsing .nav-item:last-child {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
