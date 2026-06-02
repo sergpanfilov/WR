@@ -1941,3 +1941,31 @@ div.callout-note .callout-body {
   color: $muted;
   margin: 0;
 }
+
+// === MOBILE: PHILOSOPHY + ABOUT (added) ===
+// Эти две страницы не сворачивались на мобиле: фиксированные сетки
+// и боковой отступ 5rem. Брейкпоинт согласован с главной и join (768px).
+@media (max-width: 768px) {
+
+  // --- Философия ---
+  .ph-layout {
+    grid-template-columns: 1fr;   // принципы и карточки — друг под другом
+    gap: 2.5rem;
+    padding: 2.5rem 1.25rem;      // вместо 48px 5rem
+  }
+
+  .essays-stack,
+  .essays-grid {
+    grid-template-columns: 1fr;   // карточки эссе в один столбец
+  }
+
+  // --- О проекте ---
+  .about-wrapper {
+    padding: 2.5rem 1.25rem;      // вместо 48px 5rem
+  }
+
+  .assets-grid,
+  .problems-grid {
+    grid-template-columns: 1fr;   // плашки активов и проблем в один столбец
+  }
+}
