@@ -1140,17 +1140,22 @@ div.callout-note .callout-body {
 }
 // === HOME PAGE ===
 
-// Strip all Quarto padding from vi-home and its container.
-// page-layout: full is used in index.qmd.
-#quarto-content > .vi-home,
-#quarto-content > div > .vi-home {
-  padding: 0 !important;
-  margin: 0 !important;
+// Bootstrap sets max-width: 36em + padding + margin: auto on
+// main#quarto-document-content. Override with the exact selector
+// from bootstrap.min.css to beat its specificity.
+main#quarto-document-content,
+#quarto-document-content {
   max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 0 !important;
 }
 
-.page-full #quarto-content {
-  padding: 0 !important;
+// #quarto-content > * adds padding-top: 4rem — kill for home page only
+#quarto-content > .vi-home {
+  padding-top: 0 !important;
 }
 
 .vi-home {
